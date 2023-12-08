@@ -1,0 +1,10 @@
+#login {
+    background-image: url(loginImage.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+#login .dark{
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+}
