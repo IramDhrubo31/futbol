@@ -1,5 +1,38 @@
 *{
     /* background-color: rgba(2, 1, 1, 0.469); */
     /* background-color: #222831; */
-    background-color: #343a40;
+    /* background-color: #343a40; */
+}
+header{
+    background-image: url(/images/home.jpg);
+    height: 90vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    /* margin-top: -8px; */
+}
+.navbar-collapse{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    
+}
+
+.nav-item{
+    
+    font-weight: 600;
+}
+.loginButton{
+    background-color: transparent;
+    color:  rgb(255, 255, 255);
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid  rgb(255, 255, 255);
+    border-radius: 50px;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
