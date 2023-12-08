@@ -1,0 +1,30 @@
+body{
+    background-image: url(../images/soccer-ball-grass-with-stadium-background.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form{
+    background-color: #343a40;
+    border-radius: 20px;
+    color: aliceblue;
+}
+
+form img{
+    width: 300px;
+    height: auto;
+}
+
+.formSection{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: white; /* Adjust background color as needed */
+    padding: 5px; /* Adjust padding as needed */
+}
+
+#button:hover{
+    background-color: darkorange;
+}
