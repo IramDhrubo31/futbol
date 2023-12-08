@@ -1,0 +1,19 @@
+/* section img{
+    background-image: url(../images/football_tactics_concept_background.jpg);
+    height: 100px;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+*{
+    margin: 0;
+}
+
+#hero{
+    background-image: url(/images/soccer-ball-grass-with-stadium-background.jpg);
+    height: 70vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
