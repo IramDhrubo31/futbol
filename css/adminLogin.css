@@ -13,16 +13,8 @@ form{
 }
 
 form img{
-    width: 300px;
+    width: 250px;
     height: auto;
-}
-
-.formSection{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: white; /* Adjust background color as needed */
-    padding: 5px; /* Adjust padding as needed */
 }
 
 #button:hover{
