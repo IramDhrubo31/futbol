@@ -1,0 +1,42 @@
+.paragraph{
+    width: 500px;
+    height: 200px;
+}
+#contactpage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    border-radius: 20px;
+}
+#btn {
+    font-size: 1em;
+    padding: 15px 35px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    background: rgb(2, 2, 101);
+    border-radius: 50px;
+    
+}
+
+#contact-popup{
+    margin-top: 40px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-image: url("background.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

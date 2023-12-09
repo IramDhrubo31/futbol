@@ -1,5 +1,6 @@
 body{
-    background-image: url(../images/soccer-ball-grass-with-stadium-background.jpg);
+    /* background-image: url(../images/soccer-ball-grass-with-stadium-background.jpg); */
+    background-image: url(../images/soccer-into-goal-success-concept.jpg);
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -7,16 +8,19 @@ body{
 }
 
 form{
-    background-color: #343a40;
+    /* background-color: #343a40; */
+    /* background-color: ; */
     border-radius: 20px;
-    color: aliceblue;
+    color: black;
 }
 
+
 form img{
-    width: 250px;
+    width: 350px;
     height: auto;
 }
 
 #button:hover{
     background-color: darkorange;
 }
+
