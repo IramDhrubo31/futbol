@@ -1,17 +1,17 @@
 .paragraph{
-    margin-left: 33%;
     width: 500px;
     height: 200px;
-    color: white;
-    
 }
 #contactpage{
-    background-color: green;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+    background-color: whitesmoke;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    border-radius: 20px;
 }
 #btn {
     font-size: 1em;
