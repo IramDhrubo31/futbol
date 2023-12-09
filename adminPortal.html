@@ -10,47 +10,76 @@
 </head>
 <body>
     <header>
-        <nav>
-
-        </nav>
+      <nav class="navbar navbar-expand-md fixed-top shadow-sm bg-white px-3 sticky-md-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#Home">
+            <img src="logo/Futb_l-removebg-preview.png" alt="Futbol" height="50">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" style="align-items: end;" id="navbarNav">
+            <ul class="navbar-nav nav-underline ">
+              <li class="nav-item">
+                <a class="nav-link" href="#AboutUs">ABOUT US</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#ContactUs">CONTACT US</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link" href="#addMatch">ADD MATCH</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#matchSchedule">MATCH SCHEDULE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#updateMatch">UPDATE MATCH</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#Register">REGISTER</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
         <div id="hero">
 
         </div>
     </header>
     <main>
-        <section id="section1">
-                
-        </section>
-
-        <section id="section2" class="mt-5 mb-5">
+        <section>
             <div class="container">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
+                    <div class="col" id="addMatch">
                         <div class="card h-100">
-                          <img src="images/add-match-image.jpg" class="card-img-top h-100" alt="...">
+                          <img src="images/add-match-image.jpg" class="card-img-top h-100" alt="Add New Match Image">
                           <div class="card-body">
                             <h5 class="card-title">ADD NEW MATCH</h5>
                             <p class="card-text">Here you can create a new match for the tourament</p>
+                            <a href="addMatch.html"><button class="matchButton mx-auto d-block px-3 py-1 rounded-4">ADD NEW MATCH</button></a>
                           </div>
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col" id="matchSchedule">
                         <div class="card h-100">
                           <img src="images/update-scheduled-match.jpg" class="card-img-top h-100" alt="...">
                           <div class="card-body">
-                            <h5 class="card-title">UPDATE SCHEDULED MATCH</h5>
-                            <p class="card-text">Here you can update an exisiting match</p>
+                            <h5 class="card-title">MATCH SCHEDULE</h5>
+                            <p class="card-text">Here you can view and update an exisiting match</p>
+                            <button class="matchButton mx-auto d-block px-3 py-1 rounded-4">UPDATE SCHEDULED MATCH</button>
                           </div>
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col" id="updateMatch">
                         <div class="card h-100">
                           <img src="images/update-match-score-image.jpg" class="card-img-top h-100" alt="...">
                           <div class="card-body">
                             <h5 class="card-title">UPDATE MATCH SCORE</h5>
                             <p class="card-text">Here you can update the score of a live match</p>
+                            <button class="matchButton mx-auto d-block px-3 py-1 rounded-4">UPDATE LIVE MATCH</button>
                           </div>
                         </div>
                     </div>
