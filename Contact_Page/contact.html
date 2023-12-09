@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact Popup</title>
+
+</head>
+
+<body>
+    <div class="Container">
+        <div class="row">
+            <div class="col-md-12" id="contactpage">
+                <h1 class="display-4 font-weight-bold text-white text-uppercase text-center pt-4">Contact Us</h1>
+                <div class="paragraph">
+                <p class="lead text-center"><b>Welcome to Fotboll, the ultimate destination for football enthusiasts! We're thrilled that you've chosen to connect with us. If you have any questions, suggestions, or just want to connect with us, we'd love to hear from you. Feel free to send us a message.</b> </p>
+                </div>
+           
+        
+        
+            <button id="btn" class="btn btn-danger mx-auto d-block" data-toggle="modal" data-target="#contact-popup">Click Here</button>
+            </div>
+        </div>
+
+
+        <div class="modal" id="contact-popup">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Please Fill Up The Form</h5>
+                        <button type="button" class="close" data-dismiss="contact" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <label for="userName">User Name</label>
+                                <input type="text" class="form-control" id="userName"
+                                    placeholder="Enter Your User Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="userId">User Id</label>
+                                <input type="number" class="form-control" id="userId" placeholder="Enter Your User Id">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter Your Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" placeholder="Your Query Here.." rows="4"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-danger">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

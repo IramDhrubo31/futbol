@@ -3,14 +3,19 @@
     height: 80vh;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-#login {
     height: 100vh;
-    background-color: red;
 }
+#btn:hover{
+    background: rgb(2, 60, 2);
+    color: white;
+ }
+
  #btn{
     width: 100%;
-    background-color: rgb(3, 79, 3);
+    height: 45px;
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
  }
  #accountCreate{
     display: flex;
