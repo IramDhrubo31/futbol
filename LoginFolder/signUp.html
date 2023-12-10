@@ -22,61 +22,67 @@
                     <div class="input-box">
 
                         <header>Create Account</header>
-                        <div class="input-field">
-                            <input type="text" class="input" name="name" required="" autocomplete="off">
-                            <label for="name">Name</label>
-                        </div>
-
-                        <div class="input-field">
-                            <input type="text" class="input" name="userName" required="" autocomplete="off">
-                            <label for="name">User Name</label>
-                        </div>
-                        <div class="input-field">
-                            <input type="email" class="input" name="email" required="" autocomplete="off">
-                            <label for="email">Email</label>
-                        </div>
-                        <div class="input-field">
-                            <input type="number" class="input" name="contactNumber" required="" autocomplete="off">
-                            <label for="number">Contact Number</label>
-                        </div>
-
-
-                        <div class="input-field">
-                            <input type="password" class="input" name="password" required="">
-                            <label for="pass">Password</label>
-                        </div>
-                        <div class="input-field">
-                            <input type="password" class="input" name="password" required="">
-                            <label for="pass">Confirm Password</label>
-                        </div>
-
-                        <div id="chechBox">
-                            <div class="mb-5 w-50 ">
-                                <label for="gender">Gender</label>
-                                <select gender="gender" name="gender" class="form-select-inline">
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </select>
+                        <form action="process_registration.php" method="post">
+                            <div class="input-field">
+                                <input type="text" class="input" name="name" required="" autocomplete="off">
+                                <label for="name">Name</label>
                             </div>
 
-                            <div class="mb-5 w-50 ">
-                                <label for="bloodGroup">Blood Group</label>
-                                <select gender="bloodGroup" name="bloodGroup" class="form-select-inline">
-                                    <option value="A+">A+</option>
-                                    <option value="O+">O+</option>
-                                    <option value="O-">O-</option>
-                                    <option value="B+">B+</option>
-                                    <option value="B-">B-</option>
-
-                                </select><br><br>
+                            <div class="input-field">
+                                <input type="text" class="input" name="userName" required="" autocomplete="off">
+                                <label for="name">User Name</label>
                             </div>
-                        </div>
+                            <div class="input-field">
+                                <input type="email" class="input" name="email" required="" autocomplete="off">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="number" class="input" name="contactNumber" required="" autocomplete="off">
+                                <label for="number">Contact Number</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" class="input" name="password" required="">
+                                <label for="pass">Password</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" class="input" name="password" required="">
+                                <label for="pass">Confirm Password</label>
+                            </div>
+
+                            <div id="chechBox">
+                                <div class="mb-5 w-50">
+                                    <label for="gender">Gender</label>
+                                    <select gender="gender" name="gender" class="form-select-inline">
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
 
 
-                        <div class="input-field">
+                                <div class="mb-5 w-50 ">
+                                    <label for="bloodGroup">Blood Group</label>
+                                    <select gender="bloodGroup" name="bloodGroup" class="form-select-inline">
+                                        <option value="A+">A+</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
 
-                            <input type="submit" class="submit" value="Sign Up">
-                        </div>
+                                    </select>
+                                </div>
+
+                            </div>
+                            
+                            <div class="mb-5 w-50">
+                                <label for="profileImage">Profile Image</label>
+                                <input type="file" name="profileImage" accept="image/*">
+                            </div>
+
+                            <div class="input-field">
+                                <input type="submit" class="submit" value="Sign Up">
+                            </div>
+                        </form>
+
                         <div class="signin">
                             <span>Already have an account? <a href="login.html">Log in here</a></span>
                         </div>

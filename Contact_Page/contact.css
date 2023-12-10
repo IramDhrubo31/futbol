@@ -40,3 +40,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.btn {
+    background-color: rgb(2, 2, 85);
+    color: white;
+}
