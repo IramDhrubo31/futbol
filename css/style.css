@@ -1,8 +1,8 @@
-/* *{
-    background-color: rgba(2, 1, 1, 0.469); */
+*{
+    /* background-color: rgba(2, 1, 1, 0.469); */
     /* background-color: #222831; */
-    /* background-color: #343a40;
-} */
+    /* background-color: #343a40; */
+}
 header{
     background-image: url(/images/home.jpg);
 
@@ -16,8 +16,14 @@ header{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    
-    
+}
+
+.first-section h1{
+    padding-top: 50px;
+}
+
+.event{
+    position: relative;
 }
 
 .nav-item{
@@ -50,14 +56,6 @@ footer a{
     
 }
 
-
-@media (max-width: 880px)
-{
-    body{
-        width: 100%;
-        height: 100%;
-    }
-    
-    
+.first-section{
+    padding-bottom: 20%;
 }
-
