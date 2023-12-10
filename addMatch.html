@@ -5,95 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Match</title>
     <link rel="stylesheet" href="css/addMatch.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-md fixed-top shadow-sm bg-white px-3 sticky-md-top">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#Home">
-              <img src="logo/Futb_l-removebg-preview.png" alt="Futbol" height="50">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" style="align-items: end;" id="navbarNav">
-              <ul class="navbar-nav nav-underline ">
-                <li class="nav-item">
-                  <a class="nav-link" href="#AboutUs">ABOUT US</a>
-                </li>
-                <!-- <li class="nav-item">
+  <header>
+    <nav class="navbar navbar-expand-md fixed-top shadow-sm bg-white px-3 sticky-md-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#Home">
+          <img src="logo/Futb_l-removebg-preview.png" alt="Futbol" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" style="align-items: end;" id="navbarNav">
+          <ul class="navbar-nav nav-underline ">
+            <li class="nav-item">
+              <a class="nav-link" href="adminPortal.html">ADMIN PORTAL</a>
+            </li>
+            <!-- <li class="nav-item">
                   <a class="nav-link" href="#ContactUs">CONTACT US</a>
                 </li> -->
-                <li class="nav-item">
-                  <a class="nav-link" href="#addMatch">ADD MATCH</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#matchSchedule">MATCH SCHEDULE</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#updateMatch">UPDATE MATCH</a>
-                </li>
-                <!-- <li class="nav-item">
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#addMatch">ADD MATCH</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#matchSchedule">MATCH SCHEDULE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#updateMatch">UPDATE MATCH</a>
+            </li>
+            <!-- <li class="nav-item">
                   <a class="nav-link" href="#Register">REGISTER</a>
                 </li> -->
-              </ul>
-            </div>
-          </div>
-        </nav>
-    </header>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-8">
-                        <form action="" class="text-start">
-                            <div class="mb-4 mt-4">
-                                <label for="" class="fs-3">Match Number</label>
-                                <select name="gender" class="form-select" aria-label="Default select example">
-                                    <option value="teamOne" selected>CSC101</option>
-                                    <option value="teamTwo">CSC203</option>
-                                </select>
-                            </div>
-                            <div class="d-flex justify-content-around">
-                                <div>
-                                    <label for="gender" class="fs-5">TEAM ONE</label>
-                                    <select name="gender" class="form-select" aria-label="Default select example">
-                                        <option value="teamOne" selected>CSC101</option>
-                                        <option value="teamTwo">CSC203</option>
-                                    </select>
-                                </div>
+  <!-- <section> -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-8">
+          <form>
+            <h3 class="text-center" style="margin-top: 32px;">Create a Match</h3>
             
-                                <div>
-                                    <label for="gender" class="fs-5">Time Slot</label>
-                                    <select name="gender" class="form-select" aria-label="Default select example">
-                                        <option value="timeOne" selected>9:30 AM</option>
-                                        <option value="timeTwo">10:00 AM</option>
-                                    </select>
-                                </div>
-            
-                                <div>
-                                    <label for="gender" class="fs-5">TEAM TWO</label>
-                                    <select name="gender" class="form-select" aria-label="Default select example">
-                                        <option value="teamOne" selected>CSC101</option>
-                                        <option value="teamTwo">CSC203</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            <div class="d-flex justify-content-evenly mb-2">
+              <div>
+                <label for="date" class="fs-5 my-1">Select Date</label>
+                <input type="date" name="date" id="date" class="rounded-2 px-2 py-1 my-1">
+              </div>
+              <div>
+                <label for="timeSlot" class="fs-5 my-1">Time Slot</label>
+                <input type="time" id="timeSlot" name="timeSlot" class="rounded-2 px-2 py-1 my-1">
+              </div>
             </div>
-        </section>
-    </main>
+            
+            <div class="">
+              <label for="matchNumber" class="fs-5 my-1">Match Number</label>
+              <select name="matchNumber" class="form-select my-1" aria-label="Default select example">
+                <option value="match1">Match 1</option>
+                <option value="match2">Match 2</option>
+                <option value="match2">Match 3</option>
+                <option value="match2">Match 4</option>
+                <option value="match2">Match 5</option>
+                <option value="match2">Match 6</option>
+                <option value="match2">Match 7</option>
+                <option value="match2">Match 8</option>
+              </select>
+            </div>
+
+            <div class="mt-2">
+              <label for="gender" class="fs-5">Team One</label>
+              <select name="gender" class="form-select" aria-label="Default select example">
+                <option value="teamOne" selected>CSC101</option>
+                <option value="teamTwo">CSC203</option>
+              </select>
+            </div>
+
+            <div class="mt-2">
+              <label for="gender" class="fs-5">Team Two</label>
+              <select name="gender" class="form-select" aria-label="Default select example">
+                <option value="teamOne">CSC101</option>
+                <option value="teamTwo" selected>CSC203</option>
+              </select>
+            </div>
+
+            <div class="text-center">
+              <button class="px-3 py-1 rounded-4 mt-4">CREATE MATCH</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  <!-- </section> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  
 </body>
 </html>
