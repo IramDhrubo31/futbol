@@ -1,0 +1,27 @@
+body{
+    background-image: url('/images/spotlight_image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.navbar-collapse{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    
+}
+
+.nav-item{
+    
+    font-weight: 600;
+}
+footer a{
+    
+    color: rgb(255, 255, 255);
+    font-size: large;
+    
+    
+    
+}

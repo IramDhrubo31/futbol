@@ -1,61 +1,29 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 body{
     background-image: url(/images/home.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
-    height: 90vh;
+    height: 95vh;
 }
 
-.center, .content{
+.container{
+    /* justify-content: center; */
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.content{
-    width: 1000px;
-    height: 450px;
-    background: whitesmoke;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;;
-    border-radius: 5px;
-    /* display: none; */
-   
-}
 
 .header{
-    height: 68px;
-    text-align: end;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(255,59,0,1) 100%);;
-    overflow: hidden;
-    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(255,59,0,1) 100%);
+    color: white;
 }
-.para p{
-    font-size: large;
-    font-weight: normal;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    
-}
-.fa-xmark{
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    font-size: 20px;
-    cursor: pointer;
 
+.text{
+    background-color: whitesmoke;
+    font-size: large;
 }
-@media (max-width: 880px)
-{
-    .body{
-        width: 100%;
-        height: 100%;
-    }
-    
-    
+
+h3{
+    margin-bottom: 0;
 }

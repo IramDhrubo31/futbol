@@ -10,3 +10,10 @@
     
     font-weight: 600;
 }
+footer a{
+    background: white;
+    color: black;
+    border-radius: 20px;
+    padding: 8px; 
+    
+}
