@@ -1,15 +1,39 @@
 body{
-    background-image: url("/images/leaderpagebackground.png");
+    background-image: url("/images/leaderpagebackground.jpg");
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
-h1{
+h2{
+
+    padding-top: 60px;
     text-align: center;
     color: white;
 }
+.column {
+    padding: 15px;
+}
 
+.table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+ }
+ .table thead th {
+    border-top: none;
+    border-bottom: none;
+    color: white
+ }
+ .table tbody td {
+    background-color: #f8f9fa;
+    border: 2px solid #dee2e6;
+    border-radius: 10px;
+    padding: 10px;
+    width: 25%;
+ }
+ .table tbody tr:nth-child(odd) td {
+    background-color: #ffffff;
+ }
 
   
 
