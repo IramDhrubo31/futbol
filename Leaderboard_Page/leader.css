@@ -34,15 +34,14 @@ body{
 h2{
     font-family: 'Courier New', Courier, monospace;
     padding-top: 50px;
-    color: rgb(250, 241, 252);
-    
+    color: rgb(250, 241, 252);   
 }
 .headline {
     display: flex;
     align-items: center;  
     justify-content: center;
     font-weight: 900;
-  }
+}
 .headline img{
     width: 100px;
     height: 100px;
