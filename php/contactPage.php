@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$futbol = "contact_list_table";
+$futbol = "futbol";
 
 $conn = new mysqli($servername, $username, $password, $futbol);
 
@@ -20,13 +20,16 @@ else{
     
     
     if (mysqli_query($conn, $sql)) {
-      header('location:../Contact_Page/php/contactPage.php');
+      echo 'hii';
+      //header('location:../Contact_Page/contactPage.php');
 
     } else {
       echo "<script>alert('Error: '.$sql.'<br>' . mysqli_error($conn))</script>" ;
     }
     
+    
+    }
+
     $conn->close();
-}
 }
 ?>
