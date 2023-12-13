@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="signUp.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Login</title>
+    <title>Register</title>
 </head>
 
 <body>
@@ -21,9 +21,9 @@
                 <div class="col-md-5 right">
                     <div class="input-box">
                         <header>Create Account</header>
-                        <form action="process_registration.php" method="post">
+                        <form action="/php/userRegDataStore.php" method="post">
                             <div class="input-field">
-                                <input type="text" class="input" name="name" required="" autocomplete="off">
+                                <input type="text" class="input" name="namee" required="" autocomplete="off">
                                 <label for="name">Name</label>
                             </div>
 
@@ -44,7 +44,7 @@
                                 <label for="pass">Password</label>
                             </div>
                             <div class="input-field">
-                                <input type="password" class="input" name="password" required="">
+                                <input type="password" class="input" name="c_password" required="">
                                 <label for="pass">Confirm Password</label>
                             </div>
 
@@ -76,7 +76,7 @@
                             </div>
 
                             <div class="input-field">
-                                <input type="submit" class="submit" name="submit" value="Sign Up">
+                                <input type="submit" class="submit" name="submit" value="submit">
                             </div>
                         </form>
 
