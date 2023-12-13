@@ -1,3 +1,16 @@
+<?php
+$link = mysqli_connect("localhost", "root", "", "futbol");
+
+if($link == false) {
+    die("ERROR: Could not connect. ". mysqli_connect_error());
+}
+else {
+    $sql = 'SELECT * FROM fixture_table';
+    $result = mysqli_query($link, $sql) or die(mysqli_error());
+}
+?> 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +42,7 @@
                 <a class="nav-link" href="#Players">PLAYERS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Fixtures">FIXTURES</a>
+                <a class="nav-link" href="fixture.html">FIXTURES</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#Leaderboard">LEADER BOARD</a>
@@ -53,6 +66,7 @@
                         <th scope="col">Date</th>
                         <th scope="col">Time</th>
                         <th scope="col">Team A</th>
+                        <th scope="col">Score</th>
                         <th scope="col">Team B</th>
                       </tr>
                     </thead>

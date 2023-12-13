@@ -3,7 +3,7 @@ body{
 }
 
 header{
-    background-image: url(/images/home.jpg);
+    background-image: url(../images/home.jpg);
 
     /* height: 50rem; */
     background-position: center;

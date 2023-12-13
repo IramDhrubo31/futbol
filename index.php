@@ -29,7 +29,7 @@
             <a class="nav-link" href="Contact_Page/contact.html" target="_blank">CONTACT US</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="#Players">PLAYERS</a>
+            <a class="nav-link disabled" href="#Players">PLAYERS</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="fixture.html" target="_blank">FIXTURES</a>

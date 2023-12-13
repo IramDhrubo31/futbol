@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
 
     if ($result->num_rows > 0) {
         $_SESSION['name'] = $name;
-        header('location: ../pdashboard.html');
+        header('location: ../pdashboard.php');
     } else {
         echo "Login unsuccessful. Please check your username and password.";
     }

@@ -29,10 +29,13 @@
                 <a class="nav-link" href="#Players">PLAYERS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Fixtures">FIXTURES</a>
+                <a class="nav-link" href="fixture.html">FIXTURES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Leaderboard">LEADER BOARD</a>
+                <a class="nav-link" href="#Leaderboard">LEADERBOARD</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">PROFILE</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="index.html">LOGOUT</a>
