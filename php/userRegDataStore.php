@@ -11,14 +11,14 @@ if(isset($_POST['submit'])) {
     $c_password=$_POST['c_password'];
 
 
-    echo $fname;
-    echo $uname;
-    echo $email;
-    echo $contact;
-    echo $upassword;
-    echo $gender;
-    echo $bloodGroup;
-    echo $profileImage;
+    // echo $fname;
+    // echo $uname;
+    // echo $email;
+    // echo $contact;
+    // echo $upassword;
+    // echo $gender;
+    // echo $bloodGroup;
+    // echo $profileImage;
 
     $link = mysqli_connect("localhost", "root", "", "futbol");
 
@@ -26,12 +26,13 @@ if(isset($_POST['submit'])) {
         die("ERROR: Could not connect. ". mysqli_connect_error());
     }
 
-    $sql = "INSERT INTO user_table(name, user_name, email, contactNumber, password, gender, bloodGroup, picture) VALUES ('$fname', '$uname', '$email', '$contact', '$upassword', '$gender, '$bloodGroup', '$profileImage')";
+    $sql = "INSERT INTO user_table(name, user_name, email, contactNumber, password, gender, bloodGroup, picture) VALUES ('$fname', '$uname', '$email', '$contact', '$upassword', '$gender', '$bloodGroup', '$profileImage')";
 
     if ($upassword == $c_password) {
-        echo "Passwords match!";
+        // echo "Passwords match!";
         if(mysqli_query($link, $sql)) {
-            echo "Records added successfully.";
+            // echo "Records added successfully.";
+            header('location: ../LoginFolder/login.html');
         }
         else {
             echo "ERROR: Could not able to execute $sql." . mysqli_error($link);
