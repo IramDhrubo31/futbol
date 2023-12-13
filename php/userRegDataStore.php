@@ -41,15 +41,10 @@ if(isset($_POST['submit'])) {
     } else {
         echo "Passwords do not match. Please try again.";
         header('location: ../LoginFolder/signUp.html');
+        
     }
 
-    // if(mysqli_query($link, $sql)) {
-    //     echo "Records added successfully.";
-    // }
-    // else {
-    //     echo "ERROR: Could not able to execute $sql." . mysqli_error($link);
-    // }
-
+    
 
     mysqli_close($link);
 }

@@ -1,111 +1,30 @@
-h1{
-    text-align: center;
-    font-size: 20px;
-}
-.wrapper{
+/* #login {
     background-image: url(loginImage.jpg);
-    height: 120vh;
+    height: 80vh;
+    background-repeat: no-repeat;
     background-size: cover;
-    
-}
-.main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 110vh;
-}
-.side-image{
-    background-image: url("/logo/Futb\ l.png");
+    height: 100vh;
+} */
+
+body{
+    background-image: url(loginImage.jpg);
     background-position: center;
-    border-radius: 10px 0 0 10px;
-    
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;
 }
-.row{
-  width:  900px;
-  height:700px;
-  border-radius: 10px;
-  background: white;
-  box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
-}
-#chechBox{
-    display: flex;
-}
-.text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+.submit:hover{
+    background: rgb(2, 60, 2);
+    color: white;
+ }
 
-.right{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-.input-box{
-  width: 330px;
-  box-sizing: border-box;
-}
-img{
-    width: 35px;
-    position: absolute;
-    left: 30px;
-}
-.input-box header{
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 3px;
-}
-.input-field{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-.input{
-    height: 45px;
+.submit{
     width: 100%;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    outline: none;
-    margin-bottom: 20px;
-    color: #40414a;
-}
-.input-box .input-field label{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    pointer-events: none;
-    transition: .5s;
-}
-.input-field input:focus ~ label
-   {
-    top: -10px;
-    font-size: 13px;
-  }
-  .input-field input:valid ~ label{
-   top: -10px;
-   font-size: 13px;
-   color: orangered;
- }
- .input-field .input:focus, .input-field .input:valid{
-    border-bottom: 1px solid orangered;
- }
- .submit{
     height: 45px;
+    background-color: orangered;
     color: white;
-    background: orangered;
     border-radius: 5px;
-    transition: .4s;
  }
- .submit:hover{
-    background: rgb(2, 70, 2);
-    color: white;
+ #accountCreate{
+    display: flex;
  }
- .signin{
-    text-align: center;
-    font-size: small;
-}
-
-

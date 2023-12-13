@@ -11,83 +11,193 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="container main">
-            <div class="row">
-                <div class="col-md-6 side-image">
-                    <img src="../logo/Futb_l-removebg-preview.png" alt="">
-                </div>
-
-                <div class="col-md-5 right">
-                    <div class="input-box">
-                        <header>Create Account</header>
-                        <form action="../php/userRegDataStore.php" method="post">
-                            <div class="input-field">
-                                <input type="text" class="input" name="namee" id="name" required="">
-                                <label for="name">Name</label>
-                            </div>
-
-                            <div class="input-field">
-                                <input type="text" class="input" name="userName" required="" id="username">
-                                <label for="username">User Name</label>
-                            </div>
-                            <div class="input-field">
-                                <input type="email" class="input" name="email" id="email" required="">
-                                <label for="email">Email</label>
-                            </div>
-                            <div class="input-field">
-                                <input type="number" class="input" name="contactNumber" required="" id="number">
-                                <label for="number">Contact Number</label>
-                            </div>
-                            <div class="input-field">
-                                <input type="password" class="input" name="password" required="" id="pass">
-                                <label for="pass">Password</label>
-                            </div>
-                            <div class="input-field">
-                                <input type="password" class="input" name="c_password" required="" id="confirmPass">
-                                <label for="confirmPass">Confirm Password</label>
-                            </div>
-
-                            <div id="chechBox">
+    <div class="container">
+        <div class="shadow-2-strong">
+            <div class="dark d-flex align-items-center">
+                <div class="container mt-5">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-5 col-md-8 ">
+        
+                            <form action="../php/userRegDataStore.php" method="post"
+                                class="bg-white  rounded-5 shadow-5-strong p-5">
+                                <img src="../logo/Futb_l-removebg-preview.png" class="mx-auto d-block img-fluid" width="50%">
+        
+                                <div class="form-outline mb-4">
+                                    <input type="text" class="input" name="namee" id="name" required="">
+                                    <label for="name">Name</label>
+                                </div>
+        
+                                <div class="form-outline mb-4">
+                                    <input type="text" class="input" name="userName" required="" id="username">
+                                    <label for="username">User Name</label>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <input type="email" class="input" name="email" id="email" required="">
+                                    <label for="email">Email</label>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <input type="number" class="input" name="contactNumber" required="" id="number">
+                                    <label for="number">Contact Number</label>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <input type="password" class="input" name="password" required="" id="pass">
+                                    <label for="pass">Password</label>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <input type="password" class="input" name="c_password" required="" id="confirmPass"
+                                        oninput="checkPasswordMatch()">
+                                    <label for="confirmPass">Confirm Password</label>
+                                    <span id="passwordMatchError" class="error-message"></span>
+                                </div>
+        
+                                <div id="chechBox">
+                                    <div class="mb-5 w-50">
+                                        <label for="gender">Gender</label>
+                                        <select gender="gender" name="gender" id="gender" class="form-select-inline">
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
+    
+    
+                                    <div class="mb-5 w-50 ">
+                                        <label for="bloodGroup">Blood Group</label>
+                                        <select gender="bloodGroup" name="bloodGroup" id="bloodGroup" class="form-select-inline">
+                                            <option value="A+">A+</option>
+                                            <option value="O+">O+</option>
+                                            <option value="O-">O-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B-">B-</option>
+    
+                                        </select>
+                                    </div>
+                                </div>
+        
+        
                                 <div class="mb-5 w-50">
-                                    <label for="gender">Gender</label>
-                                    <select gender="gender" name="gender" id="gender" class="form-select-inline">
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                    </select>
+                                    <label for="profileImage">Profile Image</label>
+                                    <input type="file" id="profileImage" name="profileImage" accept="image/*">
                                 </div>
-
-
-                                <div class="mb-5 w-50 ">
-                                    <label for="bloodGroup">Blood Group</label>
-                                    <select gender="bloodGroup" name="bloodGroup" id="bloodGroup" class="form-select-inline">
-                                        <option value="A+">A+</option>
-                                        <option value="O+">O+</option>
-                                        <option value="O-">O-</option>
-                                        <option value="B+">B+</option>
-                                        <option value="B-">B-</option>
-
-                                    </select>
+        
+                                <div class="input-field">
+                                    <input type="submit" class="submit" name="submit" value="submit">
                                 </div>
-                            </div>
-                            <div class="mb-5 w-50">
-                                <label for="profileImage">Profile Image</label>
-                                <input type="file" id="profileImage" name="profileImage" accept="image/*">
-                            </div>
-
-                            <div class="input-field">
-                                <input type="submit" class="submit" name="submit" value="submit">
-                            </div>
-                        </form>
-
-                        <div class="signin">
-                            <span>Already have an account? <a href="login.html">Log in here</a></span>
+        
+                            </form>
                         </div>
                     </div>
                 </div>
+        
             </div>
-        </div>
+    
     </div>
+
+
+   
+        <!-- <div class="container my-5 px-4">
+            <div class="row m-5 p-5 align-items-center" style="background-color: whitesmoke;">
+                <div class="col-md-6 col-sm-12">
+                    <div class="row text-center">
+                        <img class="" src="/logo/Futb_l-removebg-preview.png" alt="Futbol">
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="row text-center">
+
+                        <h1>Create Account</h1>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="container p-5">
+                            <form action="../php/userRegDataStore.php" method="post">
+                                <div class="input-field">
+                                    <input type="text" class="input" name="namee" id="name" required="">
+                                    <label for="name">Name</label>
+                                </div>
+    
+                                <div class="input-field">
+                                    <input type="text" class="input" name="userName" required="" id="username">
+                                    <label for="username">User Name</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="email" class="input" name="email" id="email" required="">
+                                    <label for="email">Email</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="number" class="input" name="contactNumber" required="" id="number">
+                                    <label for="number">Contact Number</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password" class="input" name="password" required="" id="pass">
+                                    <label for="pass">Password</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password" class="input" name="c_password" required="" id="confirmPass" oninput="checkPasswordMatch()">
+                                    <label for="confirmPass">Confirm Password</label>
+                                    <span id="passwordMatchError" class="error-message"></span>
+                                </div>
+    
+                                <div id="chechBox">
+                                    <div class="mb-5 w-50">
+                                        <label for="gender">Gender</label>
+                                        <select gender="gender" name="gender" id="gender" class="form-select-inline">
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
+    
+    
+                                    <div class="mb-5 w-50 ">
+                                        <label for="bloodGroup">Blood Group</label>
+                                        <select gender="bloodGroup" name="bloodGroup" id="bloodGroup" class="form-select-inline">
+                                            <option value="A+">A+</option>
+                                            <option value="O+">O+</option>
+                                            <option value="O-">O-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B-">B-</option>
+    
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-5 w-50">
+                                    <label for="profileImage">Profile Image</label>
+                                    <input type="file" id="profileImage" name="profileImage" accept="image/*">
+                                </div>
+    
+                                <div class="input-field">
+                                    <input type="submit" class="submit" name="submit" value="submit">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <span>Already have an account? <a href="login.html">Log in here</a></span>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    
+
+    <script>
+        function checkPasswordMatch() {
+            var password = document.getElementById("pass").value;
+            var c_password = document.getElementById("confirmPass").value;
+            var errorSpan = document.getElementById("passwordMatchError");
+    
+            if (password === c_password) {
+                errorSpan.innerHTML = "Passwords match!";
+               
+            } else {
+                errorSpan.innerHTML = "Passwords do not match.";
+                
+            }
+        }
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </body>
 
 
