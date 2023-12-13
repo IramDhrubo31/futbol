@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg fixed-top shadow-sm bg-white px-3 sticky-md-top">
+  <nav class="navbar navbar-expand-lg shadow-sm bg-white px-3 sticky-md-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="logo/Futb_l-removebg-preview.png" alt="Futbol" height="50">
@@ -29,10 +29,10 @@
             <a class="nav-link" href="Contact_Page/contact.html" target="_blank">CONTACT US</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Players">PLAYERS</a>
+            <a class="nav-link " href="#Players">PLAYERS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Fixtures">FIXTURES</a>
+            <a class="nav-link" href="fixture.html" target="_blank">FIXTURES</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#Leaderboard">LEADER BOARD</a>
@@ -45,132 +45,170 @@
       </div>
     </div>
   </nav>
-  <section>
+  <!-- <section> -->
     <header class="first-section">
-      <div class="container pt-5">
-        <h1 class="text-end text-white " style= "color: white; padding-right: 200px; padding-top: 250px;  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;">Want to be a part of the Futbol Club?<br>Register now!</h1>
-        <div class="d-flex justify-content-end pb-5 mb-5">
-          <p class="text-end" style="padding-right: 20px;"><a href="LoginFolder/signUp.html" role="button"><span class="loginButton"> Register</span></a></p>
-        <p style="padding-right: 200px;"><a href="LoginFolder/login.html" role="button"><span class="loginButton"> Login</span></a></p>
+      <div class="container pt-5 px-4">
+        <div class="row mt-5 pb-4 pt-5">
+          <h1 style="color: white; font-weight: bold;">Want to be a part of the Futbol Club?<br>Register now!</h1>
+          
+        </div>
+        <a href="LoginFolder/signUp.html" role="button" class="loginButton" style="margin-right: 1rem;"> Register</a>
+        <a href="LoginFolder/login.css" role="button" class="loginButton"> Login</a>
+        
       </div>
+
+      <div class="updates" style="padding-top: 12rem;">
+        <div class="container py-5 carousell" style="border: solid white;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;background: linear-gradient(to bottom right, #020251 , #f74b0d);">
+          <div class="row">
+            <div id="exp" class="carousel slide pt-3 text-center" data-bs-ride="carousel">
+              
+            
+              <!-- The slideshow/carousel -->
+              <div class="carousel-inner py-3">
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-evenly">
+    
+                    <div class="p-2 py-5" style="color: white;">
+                      <h2>Team 1</h2>
+                      <p>aaaaa</p>
+                    </div>
+                    <div class="p-2 py-5" style="color: white;">
+                      <h1>VS</h1>
+                    </div>
+                    <div class="p-2 py-5" style="color: white;">
+                      <h2>Team 2</h2>
+                      <p>bbbbb</p>
+                    </div>
+                  </div>
+            
+                </div>
+                <div class="carousel-item active">
+                  <div class="d-flex justify-content-evenly">
+    
+                    <div class="p-2 py-5" style="color: white;">
+                      <h2>Team 1</h2>
+                      <p>aaaaa</p>
+                    </div>
+                    <div class="p-2 py-5" style="color: white;">
+                      <h1>VS</h1>
+                    </div>
+                    <div class="p-2 py-5" style="color: white;">
+                      <h2>Team 2</h2>
+                      <p>bbbbb</p>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            
+              <!-- Left and right controls/icons -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#exp" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#exp" data-bs-slide="next" >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+            </div>
+        </div>
       </div>
     
   </header>
-</section>
-
-  <div class="container-fluid" style="height: 100vh; background: linear-gradient(90deg, rgba(40,38,38,1) 10%, rgba(50,46,46,1) 33%, rgba(57,53,53,1) 49%, rgba(84,84,87,0.9725140056022409) 100%); position: relative; z-index: 1;">
-    <div class="event">
-      <div class="container carousell" style="position: fixed;border: solid white;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;background: linear-gradient(to bottom right, #020251 , #f74b0d);height: 40vh;width: 70vw;position: absolute;top: -20vh;left: 50%;z-index: 2;transform: translateX(-50%);">
-        <div class="row">
-          <div id="exp" class="carousel slide pt-5 text-center" data-bs-ride="carousel">
-            
-          
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner py-3">
-              <div class="carousel-item">
-                <div class="d-flex justify-content-evenly">
+<!-- </section> -->
+  <div class="container">
+    <div class="container py-5">
+      <div class="row pb-5 pt-5">
   
-                  <div class="p-2 py-5" style="color: white;">
-                    <h2>Team 1</h2>
-                    <p>aaaaa</p>
-                  </div>
-                  <div class="p-2 py-5" style="color: white;">
-                    <h1>VS</h1>
-                  </div>
-                  <div class="p-2 py-5" style="color: white;">
-                    <h2>Team 2</h2>
-                    <p>bbbbb</p>
-                  </div>
-                </div>
-          
-              </div>
-              <div class="carousel-item active">
-                <div class="d-flex justify-content-evenly">
-  
-                  <div class="p-2 py-5" style="color: white;">
-                    <h2>Team 1</h2>
-                    <p>aaaaa</p>
-                  </div>
-                  <div class="p-2 py-5" style="color: white;">
-                    <h1>VS</h1>
-                  </div>
-                  <div class="p-2 py-5" style="color: white;">
-                    <h2>Team 2</h2>
-                    <p>bbbbb</p>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-          
-            <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#exp" data-bs-slide="prev" style="height: 40vh;">
-              <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#exp" data-bs-slide="next" style="height: 40vh;">
-              <span class="carousel-control-next-icon"></span>
-            </button>
-          </div>
-          </div>
-      </div>
-
-      <div class="container" style="padding-top: 30vh;">
-        <div class="row pb-5" >
-          
-          <div class="col-12">
-            <h2 style="color: white; text-align: start;"><i class="fa-solid fa-angles-right fa-xl" style="color: #ff1100;"></i>Events</h2>
-          </div>
+        <div class="col-12">
+          <h2 style="color: white; text-align: start;"><i class="fa-solid fa-angles-right fa-xl"
+              style="color: #ff1100;"></i>Events</h2>
         </div>
-        <div class="row pb-5">
-          <div class="col-md-6 col-sm-12 text-center ">
-            <img src="images/friendlyMatch.JPG" class="img-fluid" width="400wh" style="border: solid white;"> 
-          </div>
-          <div class="col-md-6 col-sm-12 text-center p-3">
-            <p style="color: rgba(255, 255, 255, 0.816); font-size: larger;">To cherish the vibe of the FIFA World Cup 2022, we are planning to keep a friendly match among the Clubs of the Department of Computer Science and Engineering, IUB. This is just a small invitation for you to come and see the game and cheer us up.</p>
-          </div>
-
+      </div>
+      <div class="row pb-5">
+        <div class="col-md-6 col-sm-12 " style="text-align: justify;">
+          <img src="images/friendlyMatch.JPG" class="img-fluid" width="450vw" style="border: solid white;">
+        </div>
+        <div class="col-md-6 col-sm-12 " style="text-align: justify;">
+          <p class="lead" style="color: rgba(255, 255, 255, 0.816); font-size: larger;">As we embrace the excitement of
+            the FIFA World Cup 2022, we're thrilled to announce a friendly match among the vibrant Clubs of the Department
+            of Computer Science and Engineering at IUB. It's our pleasure to extend a warm invitation for you to be a part
+            of this event, encouraging you to witness the game and contribute your support. Your presence will undoubtedly
+            add to the festive atmosphere, creating a memorable experience as we unite to revel in the shared joy of
+            football. Join us for an evening filled with camaraderie, skill, and the spirit of the beautiful game.</p>
         </div>
       </div>
     </div>
-    
+  
+  
+    <div class="container py-5">
+      <div class="row pb-5">
+        <div class="col-md-6 col-sm-12 " style="text-align: justify;">
+          <img src="images/Futsal Fest.jpg" class="img-fluid" width="450vw" style="border: solid white;">
+        </div>
+        <div class="col-md-6 col-sm-12 " style="text-align: justify;">
+          <p class="lead" style="color: rgba(255, 255, 255, 0.816); font-size: larger;"> Department of Computer Science
+            and Engineering (CSE) has clinched victory at the inaugural Intra-IUB Departmental Futsal Fest 2023! We have
+            won the final against IUB Alumni Superstars by 5 goals to 1! This triumph exemplifies our commitment not only
+            to academic excellence but also to outstanding performance in extracurricular activities. To our exceptional
+            students, your unwavering support throughout the tournament was invaluable. This win is a testament to the
+            strength of our community and the unity of our CSE family. And finally, to our triumphant players, your
+            passion and perseverance have made history and brought immense pride to our department.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container py-5">
+      <div class="row pb-5">
+        <div class="col-md-6 col-sm-12 " style="text-align: justify;">
+          <img src="images/loe1.jpg" class="img-fluid" width="450vw" style="border: solid white;">
+        </div>
+        <div class="col-md-6 col-sm-12 " style="text-align: justify;">
+          <p class="lead" style="color: rgba(255, 255, 255, 0.816); font-size: larger;"> The League of Engineers orchestrated a
+            riveting tournament spanning from March 16th to 18th at Offside. The event, brimming with exhilarating matches and
+            intense competition, unfolded each day from 11 AM to 6:30 PM. Teams clashed on the football field, cultivating an
+            electric atmosphere that allowed enthusiasts to not only exhibit their skills but also revel in the spirit of
+            camaraderie. The vibrant showcase of talent, coupled with the thrill of the matches, turned this sporting spectacle
+            into a memorable experience for all participants and attendees alike. The resounding cheers from the passionate crowd
+            echoed through Offside, amplifying the excitement as each goal and strategic play unfolded on the field, contributing
+            to the overall thrill of the tournament.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container py-5">
+      <div class="row pb-5">
+        <div class="col-md-6 col-sm-12 " style="text-align: justify;">
+          <img src="images/Losets2.jpg" class="img-fluid" width="450vw" style="border: solid white;">
+        </div>
+        <div class="col-md-6 col-sm-12 " style="text-align: justify;">
+          <p class="lead" style="color: rgba(255, 255, 255, 0.816); font-size: larger;"> In the exhilarating "League of Engineers
+            - Season 2," the spectacle unfolded from October 19th to 22nd at IUB Sports Complex. Notably, this season embraced
+            inclusivity by introducing four women's teams, adding depth to the competition. The player auction heightened
+            anticipation, setting the stage for intense matches and spirited rivalry. From 11 AM to 6:30 PM daily, teams fiercely
+            contended for the coveted title of football champions. Beyond the competition, the event showcased unity and
+            collaboration, embodying the League of Engineers' ethos. Open to all SETS students, it provided a dynamic platform for
+            talent display, fostering camaraderie and etching this season as a landmark in the league's rich history.</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="container-fluid" style="background: linear-gradient(90deg, rgba(40,38,38,1) 10%, rgba(50,46,46,1) 33%, rgba(57,53,53,1) 49%, rgba(84,84,87,0.9725140056022409) 100%);">
-    <div class="container">
-       <div class="d-flex flex-sm-row flex-column-reverse" style="padding-top: 10vh;">
-          <div class="col-md-6 col-sm-12 order-md-1 order-sm-2 text-center">
-             <p style="color: rgba(255, 255, 255, 0.816); font-size: larger;"> Department of Computer Science and Engineering (CSE) has clinched victory at the inaugural Intra-IUB Departmental Futsal Fest 2023! We have won the final against IUB Alumni Superstars by 5 goals to 1! This triumph exemplifies our commitment not only to academic excellence but also to outstanding performance in extracurricular activities. To our exceptional students, your unwavering support throughout the tournament was invaluable. This win is a testament to the strength of our community and the unity of our CSE family. And finally, to our triumphant players, your passion and perseverance have made history and brought immense pride to our department.</p>
-          </div>
-          <div class="col-md-6 col-sm-12 order-md-2 order-sm-1 text-center">
-             <img src="images/Futsal Fest.jpg" class="img-fluid" width="400" style="border: solid white;">
-          </div>
-       </div>
-    </div>
- </div>
  
-
-  <!-- </section> -->
-  <footer>
-    <div class="text-center" style="height: 20vh; background-color: black;">
-      <div class="container">
+  <footer style="height: 20vh; background-color: black;">
+    <div class="container">
         <div class="row">
-          <div class="col-3 text-center pt-5">
+          <div class="col-6 pt-5">
             <p style="color: white;"><i class="fa-regular fa-copyright" style="color: #ffffff;"></i>2023 Futbol</p>
 
           </div>
-          <div class="col-6 text-center pt-5">
+          <div class="col-6 pt-5" style="text-align: end;">
             <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://gmail.com"><i class="fa-regular fa-envelope"></i></a>
           </div>
-          <div class="col-3 text-center pt-5">
-            <u style="color: white;">Terms & Cookies</u>
-          </div>
+        
         </div>
       </div>
-
-    </div>
   </footer>
+
 
   <!-- <div class="container">
     <div class="row">

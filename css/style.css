@@ -1,15 +1,15 @@
-*{
-    /* background-color: rgba(2, 1, 1, 0.469); */
-    /* background-color: #222831; */
-    /* background-color: #343a40; */
+body{
+    background: linear-gradient(90deg, rgba(40,38,38,1) 10%, rgba(50,46,46,1) 33%, rgba(57,53,53,1) 49%, rgba(84,84,87,0.9725140056022409) 100%);
 }
+
 header{
     background-image: url(/images/home.jpg);
 
-    /* height: 90vh; */
+    /* height: 50rem; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
+    background-attachment: fixed;
     /* margin-top: -8px; */
 }
 .navbar-collapse{
@@ -18,44 +18,44 @@ header{
     align-items: flex-end;
 }
 
-.first-section h1{
+/* .first-section h1{
     padding-top: 50px;
-}
+} */
 
-.event{
+/* .event{
     position: relative;
-}
+} */
 
 .nav-item{
     
     font-weight: 600;
 }
 .loginButton{
-    background-color: transparent;
+    background-color: rgb(28, 146, 44);
     color:  rgb(255, 255, 255);
-    padding: 12px 25px;
+    padding: 1rem 1rem;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    border: 2px solid  rgb(255, 255, 255);
-    border-radius: 50px;
+    /* display: inline-block; */
+    border: 5px solid  rgb(28, 146, 44);
+    border-radius: 1rem;
     font-size: large;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     
 }
 .loginButton:hover{
-    background-color: #020251;
+    background-color: rgba(28, 146, 44, 0.462);
 }
 
 footer a{
-    background: white;
-    color: black;
-    border-radius: 20px;
-    padding: 8px; 
+    
+    color: rgb(255, 255, 255);
+    font-size: large;
+     
     
 }
 
-.first-section{
-    padding-bottom: 20%;
-}
+/* .first-section{
+    padding-bottom: 10rem;
+} */

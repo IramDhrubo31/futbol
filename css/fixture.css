@@ -1,9 +1,10 @@
 body{
-    background-image: url('/images/spotlight_image.jpg');
+    background-image: url('/images/5618236.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
     background-attachment: fixed;
+   
 }
 
 .navbar-collapse{
@@ -18,11 +19,11 @@ body{
     
     font-weight: 600;
 }
+
 footer a{
     
     color: rgb(255, 255, 255);
     font-size: large;
-    
-    
+     
     
 }
