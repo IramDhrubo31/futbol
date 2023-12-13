@@ -43,3 +43,7 @@ body{
     background-color: rgb(2, 2, 85);
     color: white;
 }
+#content{
+    color: rgb(95, 91, 90);
+    text-align: center;
+}

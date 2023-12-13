@@ -6,18 +6,24 @@ function closePopup() {
     document.getElementById('contact-popup').style.display = 'none';
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    var form = document.getElementById('contact-form');
+function calculate() {
+    event.preventDefault();
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault(); 
-        var confirmationMessage = document.getElementById('confirmation-message');
-        confirmationMessage.innerText = 'Your Form is Submitted';
-        confirmationMessage.style.display = 'block';
+    var userName = document.getElementById("userName").value;
+    var userID = document.getElementById("userId").value;
+    var Email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
 
-        
-        closePopup();
-    });
-});
+    if (userName === "" || userID === "" || Email === "" || message === "") {
+        document.getElementById("content").innerHTML = "<h4>Your registration is error. Please fill in all the required fields.</h4>";
+
+    }
+
+    else {
+        document.getElementById("content").innerHTML = `<h4>Thank you for reaching out! Your message has been received, and we'll get back to you shortly.</h4>`;
+    }
+
+}
+
 
 
