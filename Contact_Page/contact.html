@@ -17,8 +17,6 @@
             <p class="lead text-center"><b>Welcome to Fotboll, the ultimate destination for football enthusiasts! We're
                     thrilled that you've chosen to connect with us. If you have any questions, suggestions, or just want
                     to connect with us, we'd love to hear from you. Feel free to send us a message.</b></p>
-
-            <!-- HAVE TO ADD FONT AWESOME ICONS -->
         </div>
         <button id="btn" class="btn btn-danger mx-auto d-block" data-toggle="modal" data-target="#contact-popup">Click
             Here</button>
@@ -52,21 +50,30 @@
                             <textarea class="form-control" id="message" placeholder="Your Query Here.." rows="4"
                                 required></textarea>
                         </div>
+
                         <div class="text-center">
-                            <button type="submit" class="btn btn-danger">Submit</button>
+                            <button type="submit" class="btn btn-danger" onclick="calculate(event)">Submit</button>
                         </div>
+
+                        <div id="content">
+                            <script src="script.js"></script>
+                        </div>
+
                     </form>
                 </div>
             </div>
+
         </div>
+
     </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
-    
+
+
 </body>
 
 </html>
