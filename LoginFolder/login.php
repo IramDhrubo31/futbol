@@ -5,13 +5,7 @@ if (isset($_POST['submit'])) {
     $pass = $_POST['pass'];
 
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "futbol";
-
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    include "../connection.php";
 
 
     if ($conn->connect_error) {

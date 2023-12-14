@@ -1,13 +1,13 @@
 <?php
-$link = mysqli_connect("localhost", "root", "", "futbol");
+// $link = mysqli_connect("localhost", "root", "", "futbol");
 
-if($link == false) {
-    die("ERROR: Could not connect. ". mysqli_connect_error());
-}
-else {
-    $sql = 'SELECT * FROM user_table';
-    $result = mysqli_query($link, $sql) or die(mysqli_error());
-}
+// if($link == false) {
+//     die("ERROR: Could not connect. ". mysqli_connect_error());
+// }
+// else {
+//     $sql = 'SELECT * FROM user_table';
+//     $result = mysqli_query($link, $sql) or die(mysqli_error());
+// }
 ?>
 
 
@@ -122,7 +122,7 @@ else {
           </div>
           <div class="col-4">
             <div class="row pt-5 text-center">
-              <a type="button" class="btn py-3 btn-success" href="matchreg.html" style=" color: white;">Register Match</a>
+              <a type="button" class="btn py-3 btn-success" href="matchreg.php" style=" color: white;">Register Match</a>
             </div>
           </div>
         </div>
