@@ -1,13 +1,13 @@
 <?php
-$link = mysqli_connect("localhost", "root", "", "futbol");
+// $link = mysqli_connect("localhost", "root", "", "futbol");
 
-if($link == false) {
-    die("ERROR: Could not connect. ". mysqli_connect_error());
-}
-else {
-    $sql = 'SELECT * FROM fixture_table';
-    $result = mysqli_query($link, $sql) or die(mysqli_error());
-}
+// if($link == false) {
+//     die("ERROR: Could not connect. ". mysqli_connect_error());
+// }
+// else {
+//     $sql = 'SELECT * FROM fixture_table';
+//     $result = mysqli_query($link, $sql) or die(mysqli_error());
+// }
 ?> 
 
 
