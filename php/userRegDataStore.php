@@ -7,7 +7,7 @@ if(isset($_POST['submit'])) {
     $upassword=$_POST['password'];
     $gender=$_POST['gender'];
     $bloodGroup=$_POST['bloodGroup'];
-    $profileImage=$_POST['profileImage'];
+    $profileImage=$_FILES['profileImage']['name'];
     $c_password=$_POST['c_password'];
 
 
@@ -19,6 +19,10 @@ if(isset($_POST['submit'])) {
     // echo $gender;
     // echo $bloodGroup;
     // echo $profileImage;
+
+    $profileImage = $_FILES['profileImage']['name'];
+    $profileImageTmp = $_FILES['profileImage']['tmp_name'];
+    $uploadDirectory = "upload/";
 
     $link = mysqli_connect("localhost", "root", "", "futbol");
 
@@ -32,6 +36,7 @@ if(isset($_POST['submit'])) {
         // echo "Passwords match!";
         if(mysqli_query($link, $sql)) {
             // echo "Records added successfully.";
+            move_uploaded_file($profileImageTmp, $uploadDirectory.$profileImage);
             header('location: ../LoginFolder/login.html');
         }
         else {

@@ -1,3 +1,16 @@
+<?php
+$link = mysqli_connect("localhost", "root", "", "futbol");
+
+if($link == false) {
+    die("ERROR: Could not connect. ". mysqli_connect_error());
+}
+else {
+    $sql = 'SELECT * FROM user_table';
+    $result = mysqli_query($link, $sql) or die(mysqli_error());
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,13 +42,13 @@
                 <a class="nav-link" href="#Players">PLAYERS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/php/fixture.php">FIXTURES</a>
+                <a class="nav-link" href="fixture.php">FIXTURES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="leaderboard.php">LEADERBOARD</a>
+                <a class="nav-link" href="leaderboard.html">LEADERBOARD</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.html">PROFILE</a>
+                <a class="nav-link" href="pprofile.php">PROFILE</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="index.html">LOGOUT</a>
@@ -117,7 +130,9 @@
         <div class="row mb-3">
             <div class="col-md-4 col-sm-12 py-5" style="font-family: Verdana, Geneva, Tahoma, sans-serif; border-radius: 3px; border: solid gray; background-color: whitesmoke; border-radius: 5px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                 <div class="row">
+                 
                   <img>
+                  
                 </div>
                 <div class="row mb-3">
                   <labe>Name:</labe>
