@@ -1,5 +1,6 @@
 <?php 
     if(isset($_POST['submit'])){
+      session_start();
         $username=$_POST['username'];
         $matchNumber=$_POST['matchNum'];
         $teamName=$_POST['teamname'];
@@ -20,10 +21,13 @@
             echo "ERROR: Could not able to execute $sql." . mysqli_error($link);
         }
 
-        $sqlFetch = "select * from player_table where user_name = '{$username}'";
-        $res = mysqli_query($link,$sqlFetch);
+        $sqlFetch = "SELECT * FROM player_table WHERE user_name = '$username'";
+        $userInfo = mysqli_query($link, $sqlFetch);
+        $userInfo = mysqli_fetch_assoc($userInfo);
 
-        mysqli_close($link);
+        $sqlFetch2 = "SELECT * FROM match_table WHERE match_number = '$matchNumber'";
+        $matchInfo = mysqli_query($link, $sqlFetch2);
+        $matchInfo = mysqli_fetch_assoc($matchInfo);
     }
 ?>
 <!DOCTYPE html>
@@ -81,27 +85,28 @@
           </div>
           <div class="row ">
             <div class="col-12">
-              <!-- </div>
-              <div class="col-4"> -->
               <label style="color: white; margin-bottom: 3px; margin-top: 3px; font-size: large;" for="username">Username:</label>
               <input required type="text" class="form-control shadow-sm" placeholder="Enter your Username"
                 aria-label="username" name="username" id="username" autocomplete="off">
 
               <label for="matchNum" style="color: white; margin-bottom: 3px; margin-top: 5px; font-size: large;">Match Number</label>
               <select name="matchNum" id="matchNum" class="form-select" aria-label="Default select example">
-                <option value="1" selected>1</option>
-                <option value="2">2</option>
+                <option value="" disabled selected>Select an option</option>  
+                <option value="Match 1">Match 1</option>
+                <option value="Match 2">Match 2</option>
               </select> 
 
               <label for="teamname" style="color: white; margin-bottom: 3px; margin-top: 5px; font-size: large;">Choose Team</label>
               <select name="teamname" id="teamname" class="form-select" aria-label="Default select example">
-                <option value="CSC101" selected>CSC101</option>
+                <option value="" disabled selected>Select an option</option>
+                <option value="CSC101">CSC101</option>
                 <option value="CSC203">CSC203</option>
               </select> 
 
               <label for="position" style="color: white; margin-bottom: 3px; margin-top: 5px; font-size: large;">Choose Position</label>
               <select name="position" id="position" class="form-select" aria-label="Default select example">
-                <option value="Striker" selected>Striker</option>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Striker">Striker</option>
                 <option value="Forward">Forward</option>
                 <option value="Midfilder">Midfilder</option>
                 <option value="Defender">Defender</option>
@@ -110,7 +115,6 @@
             </div>
           </div>
           <div class="m-4 text-center">
-            <!-- <button type="button" name="submit" class="btn btn-success">Register</button> -->
             <input type="submit" class="btn btn-success" name="submit" value="Register">
           </div>
 
@@ -137,19 +141,19 @@
             <tbody>
               <tr>
                 <td>Match Number</td>
-                <td></td>
+                <td><?php echo $userInfo['match_num']; ?></td>
               </tr>
               <tr>
                 <td>Team Name</td>
-                <td></td>
+                <td><?php echo $userInfo['team_name']; ?></td>
               </tr>
               <tr>
                 <td>Match Date</td>
-                <td></td>
+                <td><?php echo $matchInfo['match_date']; ?></td>
               </tr>
               <tr>
                 <td>Match Time</td>
-                <td></td>
+                <td><?php echo $matchInfo['match_time']; ?></td>
               </tr>
             </tbody>
 
@@ -175,7 +179,6 @@
         </div>
       </div>
   </footer>
-  <!-- <script src="js/pdashboard.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
