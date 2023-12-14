@@ -141,19 +141,35 @@
             <tbody>
               <tr>
                 <td>Match Number</td>
-                <td><?php echo $userInfo['match_num']; ?></td>
+                <td>
+                  <?php 
+                    if(isset($_POST['submit'])){
+                      echo $userInfo['match_num']; }?></td>
               </tr>
               <tr>
                 <td>Team Name</td>
-                <td><?php echo $userInfo['team_name']; ?></td>
+                <td>
+                  <?php 
+                    if(isset($_POST['submit'])){
+                      echo $userInfo['team_name']; 
+                    }
+                  ?>
+                </td>
               </tr>
               <tr>
                 <td>Match Date</td>
-                <td><?php echo $matchInfo['match_date']; ?></td>
+                <td>
+                  <?php 
+                    if(isset($_POST['submit'])){
+                      echo $matchInfo['match_date']; 
+                    }?></td>
               </tr>
               <tr>
                 <td>Match Time</td>
-                <td><?php echo $matchInfo['match_time']; ?></td>
+                <td>
+                  <?php 
+                    if(isset($_POST['submit'])){
+                      echo $matchInfo['match_time']; }?></td>
               </tr>
             </tbody>
 
