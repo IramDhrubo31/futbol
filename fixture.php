@@ -1,4 +1,5 @@
 <?php
+include "connection.php";
 // $link = mysqli_connect("localhost", "root", "", "futbol");
 
 // if($link == false) {

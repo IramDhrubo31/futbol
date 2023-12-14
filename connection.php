@@ -1,9 +1,9 @@
 <?php 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "futbol";
+    $servername = "localhost";
+    $dbusername = "root";
+    $password = "";
+    $dbname = "futbol";
 
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+    $link = new mysqli($servername, $dbusername, $password, $dbname);
 ?>

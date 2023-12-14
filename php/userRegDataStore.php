@@ -22,7 +22,7 @@ if(isset($_POST['submit'])) {
 
     
 
-    $link = mysqli_connect("localhost", "root", "", "futbol");
+    include "connection.php";
 
     if($link == false) {
         die("ERROR: Could not connect. ". mysqli_connect_error());

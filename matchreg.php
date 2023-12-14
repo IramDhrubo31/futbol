@@ -5,7 +5,7 @@
         $teamName=$_POST['teamname'];
         $position=$_POST['position'];
 
-        $link = mysqli_connect("localhost", "root", "", "futbol");
+        include "connection.php";
         
         if($link == false) {
             die("ERROR: Could not connect. ". mysqli_connect_error());
@@ -85,7 +85,7 @@
               <div class="col-4"> -->
               <label style="color: white; margin-bottom: 3px; margin-top: 3px; font-size: large;" for="username">Username:</label>
               <input required type="text" class="form-control shadow-sm" placeholder="Enter your Username"
-                aria-label="username" name="username" id="username">
+                aria-label="username" name="username" id="username" autocomplete="off">
 
               <label for="matchNum" style="color: white; margin-bottom: 3px; margin-top: 5px; font-size: large;">Match Number</label>
               <select name="matchNum" id="matchNum" class="form-select" aria-label="Default select example">

@@ -7,7 +7,7 @@
         $time=$_POST['timeSlot'];
         $score=$_POST['score'];
 
-        $link = mysqli_connect("localhost", "root", "", "futbol");
+        include "connection.php";
         
         if($link == false) {
             die("ERROR: Could not connect. ". mysqli_connect_error());
