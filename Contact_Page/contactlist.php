@@ -1,15 +1,10 @@
 <?php
 session_start();
-if (!$_SESSION['name']=="admin"){
+if (!$_SESSION['username']=="admin"){
  header('location:adminLogin.html');
 }
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$futbol = "futbol";
-
-$conn = new mysqli($servername, $username, $password, $futbol);
+include "../connection.php";
 
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);

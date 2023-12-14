@@ -1,10 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$futbol = "futbol";
-
-$conn = new mysqli($servername, $username, $password, $futbol);
+include "connection.php";
 
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);

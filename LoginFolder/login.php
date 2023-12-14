@@ -1,17 +1,11 @@
 <?php
 if (isset($_POST['submit'])) {
     session_start();
-    $name = $_POST['name'];
+    $username = $_POST['username'];
     $pass = $_POST['pass'];
 
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "futbol";
-
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    include "../connection.php";
 
 
     if ($conn->connect_error) {
@@ -19,11 +13,11 @@ if (isset($_POST['submit'])) {
     }
 
 
-    $sql = "SELECT * FROM user_table WHERE user_name = '$name' AND password = '$pass'";
+    $sql = "SELECT * FROM user_table WHERE user_name = '$username' AND password = '$pass'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        $_SESSION['name'] = $name;
+        $_SESSION['username'] = $username;
         header('location: ../pdashboard.php');
     } else {
         echo "Login unsuccessful. Please check your username and password.";
