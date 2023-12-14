@@ -56,7 +56,7 @@
                 <a class="nav-link" href="pprofile.php">PROFILE</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.html">LOGOUT</a>
+                <a class="nav-link" href="index.php">LOGOUT</a>
               </li>
               
             </ul>
@@ -134,16 +134,13 @@
 
         <div class="row mb-3">
             <div class="col-md-4 col-sm-12 py-5" style="font-family: Verdana, Geneva, Tahoma, sans-serif; border-radius: 3px; border: solid gray; background-color: whitesmoke; border-radius: 5px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
-                <?php 
-                if(mysqli_num_rows($result)>0) {
-                  while($row = mysqli_fetch_assoc($result)) {
-                ?>  
+        
               <div class="row">
-                <img src="<?php echo "upload/".$row['picture']; ?>" alt="Image">
+                <img src="<?php echo "upload/".$row['picture']; ?>" width=70px alt="Image">
                 
                 </div>
                 <div class="row mb-3">
-                  <label>Name: <?php echo $username;?></label>
+                  <label>Name: <?php echo $userInfo['name'];?></label>
                  
               </div>
               <!-- <div class="row mb-3">
@@ -159,17 +156,14 @@
                   
               </div>
               <div class="row">
-                  <label>Gender:</label>
+                  <label>Gender: <?php echo $userInfo['gender']; ?></label>
                   
               </div>
               <div class="row">
-                  <label>Blood Group:</label>
+                  <label>Blood Group: <?php echo $userInfo['bloodGroup']; ?></label>
                  
               </div>
-              <?php
-                }
-              }
-                ?>
+              
             </div>
             <div class="col-md-8 col-sm-12 py-5 "  style="border-radius: 3px; background-color: #020251; border: solid whitesmoke;">
               <div class="row my-3 text-center" style="color: white;">

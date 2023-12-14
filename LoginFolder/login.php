@@ -8,20 +8,21 @@ if (isset($_POST['submit'])) {
     include "../connection.php";
 
 
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+    if ($link->connect_error) {
+        die("Connection failed: " . $link->connect_error);
     }
 
 
     $sql = "SELECT * FROM user_table WHERE user_name = '$username' AND password = '$pass'";
-    $result = $conn->query($sql);
+    $result = $link->query($sql);
 
     if ($result->num_rows > 0) {
         $_SESSION['username'] = $username;
-        header('location: ../pdashboard.php');
+        header('location: ../dashboard.php');
     } else {
         echo "Login unsuccessful. Please check your username and password.";
     }
 
-    $conn->close();
+    $link->close();
 }
+?>
