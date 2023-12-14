@@ -10,11 +10,11 @@ function calculate() {
     event.preventDefault();
 
     var userName = document.getElementById("userName").value;
-    var userID = document.getElementById("userId").value;
+    var contactNumber = document.getElementById("contactNumber").value;
     var Email = document.getElementById("email").value;
     var message = document.getElementById("message").value;
 
-    if (userName === "" || userID === "" || Email === "" || message === "") {
+    if (userName === "" || contactNumber === "" || Email === "" || message === "") {
         document.getElementById("content").innerHTML = "<h4>Your registration is error. Please fill in all the required fields.</h4>";
 
     }

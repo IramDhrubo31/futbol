@@ -1,13 +1,13 @@
 <?php
 session_start();
 if (!$_SESSION['name']=="admin"){
- header('location:login.html');
+ header('location:adminLogin.html');
 }
 
 $servername = "localhost";
 $username = "root";
 $password = "";
-$futbol = "contact_list_table";
+$futbol = "futbol";
 
 $conn = new mysqli($servername, $username, $password, $futbol);
 
@@ -15,12 +15,10 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 else{
-    $sql = 'select * from contact';
+    $sql = 'select * from contact_list_table';
     $res = mysqli_query($conn,$sql);
-    echo mysqli_num_rows($res);
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,8 +44,8 @@ else{
               <tr>
                 <th class="table-dark">#</th>
                 <th class="table-primary">User Name</th>
-                <th class="table-secondary">User Id</th>
-                <th class="table-success">Email</th>
+                <th class="table-secondary">Email</th>
+                <th class="table-success">Contact Number</th>
                 <th class="table-danger">Message</th>
                 <th class="table-secondary">Action</th>
               </tr>
@@ -58,22 +56,22 @@ else{
 
         <?php
         if (mysqli_num_rows($res) > 0) {
-            while ($rows = mysqli_fetch_assoc($res)) {
-                $id = $rows["id"];
+          $count = 1;  
+          while ($rows = mysqli_fetch_assoc($res)) {
+                $id = $rows["contact_id"];
                 echo ' <tr>
-                <td>' .$rows["userName"].'</td>
+                <td>'. $count++ .'</td>
+                <td>' .$rows["user_name"].'</td>
                 <td>' .$rows["email"].'</td>
-                <td>' .$rows["contactNumber"].'</td>
-                <td>' .$rows["message"].'</td>
-                <td><a class="btn btn-danger" href='."contactdelete.php?id=".$id.'>Delete</a></td>
+                <td>' .$rows["contact_number"].'</td>
+                <td>' .$rows["contact_message"].'</td>
+                <td class="table-secondary"><a class="btn btn-danger" href='."contactdelete.php?id=".$id.'>Delete</a></td>
 
             </tr>
                 ';
             }
         }
-            ?>
-           
-<!-- <td class="table-secondary"><a class="btn ">Delete</a></td> -->
+            ?><!-- <td class="table-secondary"><a class="btn ">Delete</a></td> -->
         
               
 
