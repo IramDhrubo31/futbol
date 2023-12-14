@@ -68,10 +68,10 @@
                     <labe>User Name:</labe>
                     <label></label>
                 </div>
-                <div class="row mb-3">
+                <!-- <div class="row mb-3">
                     <labe>userID:</labe>
                     <label></label>
-                </div>
+                </div> -->
                 <div class="row mb-3">
                     <labe>Email:</labe>
                     <label></label>

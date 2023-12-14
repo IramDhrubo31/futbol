@@ -129,24 +129,42 @@
 
         <div class="row mb-3">
             <div class="col-md-4 col-sm-12 py-5" style="font-family: Verdana, Geneva, Tahoma, sans-serif; border-radius: 3px; border: solid gray; background-color: whitesmoke; border-radius: 5px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
-                <div class="row">
-                 
-                  <img>
-                  
+                <?php 
+                if(mysqli_num_rows($result)>0) {
+                  while($row = mysqli_fetch_assoc($result)) {
+                ?>  
+              <div class="row">
+                <img src="<?php echo "upload/".$row['picture']; ?>" alt="Image">
+                
                 </div>
                 <div class="row mb-3">
-                  <labe>Name:</labe>
-                  <label></label>
+                  <label>Name:</label>
+                  <label><?php echo $row['name']; ?></label>
               </div>
-              <div class="row mb-3">
-                  <labe>userID:</labe>
+              <!-- <div class="row mb-3">
+                  <label>userID:</label>
                   <label></label>
+              </div> -->
+              <div class="row mb-3">
+                  <label>user name:</label>
+                  <label><?php echo $row['user_name']; ?></label>
               </div>
               <div class="row">
-                  <labe>Email:</labe>
-                  <label></label>
+                  <label>Email:</label>
+                  <label><?php echo $row['email']; ?></label>
               </div>
-    
+              <div class="row">
+                  <label>Gender:</label>
+                  <label><?php echo $row['gender']; ?></label>
+              </div>
+              <div class="row">
+                  <label>Blood Group:</label>
+                  <label><?php echo $row['bloodGroup']; ?></label>
+              </div>
+              <?php
+                }
+              }
+                ?>
             </div>
             <div class="col-md-8 col-sm-12 py-5 "  style="border-radius: 3px; background-color: #020251; border: solid whitesmoke;">
               <div class="row my-3 text-center" style="color: white;">
