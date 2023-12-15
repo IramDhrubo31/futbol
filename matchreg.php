@@ -15,7 +15,7 @@
         $sql = "INSERT INTO player_table(user_name, match_num, team_name, position) VALUES ('$username', '$matchNumber', '$teamName', '$position')";
 
         if(mysqli_query($link, $sql)) {
-            // header('location: aboutus.html');
+          
         }
         else {
             echo "ERROR: Could not able to execute $sql." . mysqli_error($link);
