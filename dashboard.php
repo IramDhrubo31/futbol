@@ -135,11 +135,11 @@
         <div class="row mb-3">
             <div class="col-md-4 col-sm-12 py-5" style="font-family: Verdana, Geneva, Tahoma, sans-serif; border-radius: 3px; border: solid gray; background-color: whitesmoke; border-radius: 5px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
         
-              <div class="row">
-                <img src="<?php echo "upload/".$row['picture']; ?>" width=70px alt="Image">
+              <div class="row mb-3 text-center">
+                <img src="<?php echo "upload/".$userInfo['picture']; ?>" width=70px alt="Image">
                 
                 </div>
-                <div class="row mb-3">
+                <div class="row mb-2">
                   <label>Name: <?php echo $userInfo['name'];?></label>
                  
               </div>
@@ -147,19 +147,19 @@
                   <label>userID:</label>
                   <label></label>
               </div> -->
-              <div class="row mb-3">
+              <div class="row mb-2">
                   <label>user name: <?php echo $username;?></label>
                   
               </div>
-              <div class="row">
+              <div class="row mb-2 ">
                   <label>Email: <?php echo $userInfo['email']; ?></label>
                   
               </div>
-              <div class="row">
+              <div class="row  mb-2">
                   <label>Gender: <?php echo $userInfo['gender']; ?></label>
                   
               </div>
-              <div class="row">
+              <div class="row mb-2">
                   <label>Blood Group: <?php echo $userInfo['bloodGroup']; ?></label>
                  
               </div>

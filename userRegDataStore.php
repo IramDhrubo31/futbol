@@ -35,7 +35,7 @@ if(isset($_POST['submit'])) {
         if(mysqli_query($link, $sql)) {
             // echo "Records added successfully.";
             move_uploaded_file($_FILES['profileImage']['tmp_name'], "upload/".$profileImage);
-            header('location: ../LoginFolder/login.html');
+            header('location:LoginFolder/login.html');
         }
         else {
             echo "ERROR: Could not able to execute $sql." . mysqli_error($link);

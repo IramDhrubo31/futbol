@@ -1,14 +1,14 @@
 <?php
 include "connection.php";
-// $link = mysqli_connect("localhost", "root", "", "futbol");
 
-// if($link == false) {
-//     die("ERROR: Could not connect. ". mysqli_connect_error());
-// }
-// else {
-//     $sql = 'SELECT * FROM fixture_table';
-//     $result = mysqli_query($link, $sql) or die(mysqli_error());
-// }
+
+if($link == false) {
+    die("ERROR: Could not connect. ". mysqli_connect_error());
+}
+else {
+    $sql = 'SELECT * FROM match_table';
+    $result = mysqli_query($link, $sql) or die(mysqli_error());
+}
 ?> 
 
 
@@ -72,10 +72,22 @@ include "connection.php";
                       </tr>
                     </thead>
                     <tbody>
-                      echo <tr>
-                        <!-- <td>'.$row[""].'</td> -->
+                    <?php
+                      if(mysqli_num_rows($result)>0) {
+
+                         while($row = mysqli_fetch_assoc($result)) {
+                          echo '<tr>
+                                <td>'.$row["match_number"].'</td>
+                                <td>'.$row["match_date"].'</td>
+                                <td>'.$row["match_time"].'</td>
+                                <td>'.$row["team_one"].'</td>
+                                <td>'.$row["score"].'</td>
+                                <td>'.$row["team_two"].'</td>
                         
-                      </tr>
+                        </tr>';
+            }
+          }
+          ?>
                       
                     </tbody>
                   </table>
