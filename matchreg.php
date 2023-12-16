@@ -2,7 +2,7 @@
     if(isset($_POST['submit'])){
       session_start();
         $username=$_POST['username'];
-        $matchNumber=$_POST['matchNum'];
+        $matchNumber=$_POST['matchNumber'];
         $teamName=$_POST['teamname'];
         $position=$_POST['position'];
 
@@ -89,8 +89,8 @@
               <input required type="text" class="form-control shadow-sm" placeholder="Enter your Username"
                 aria-label="username" name="username" id="username" autocomplete="off">
 
-              <label for="matchNum" style="color: white; margin-bottom: 3px; margin-top: 5px; font-size: large;">Match Number</label>
-              <select name="matchNum" id="matchNum" class="form-select" aria-label="Default select example">
+              <label for="matchNumber" style="color: white; margin-bottom: 3px; margin-top: 5px; font-size: large;">Match Number</label>
+              <select name="matchNumber" id="matchNumber" class="form-select" aria-label="Default select example">
                 <option value="" disabled selected>Select an option</option>  
                 <option value="Match 1">Match 1</option>
                 <option value="Match 2">Match 2</option>

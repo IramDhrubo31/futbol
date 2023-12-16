@@ -99,11 +99,6 @@
                 <option value="Match 1">Match 1</option>
                 <option value="Match 2">Match 2</option>
                 <option value="Match 3">Match 3</option>
-                <!-- <option value="Match 4">Match 4</option>
-                <option value="Match 5">Match 5</option>
-                <option value="Match 6">Match 6</option>
-                <option value="Match 7">Match 7</option>
-                <option value="Match 8">Match 8</option> -->
               </select>
             </div>
 
