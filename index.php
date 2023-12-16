@@ -1,5 +1,18 @@
 <?php 
+  session_start();
+ 
   include "connection.php";
+
+  if($link == false) {
+      die("ERROR: Could not connect. ". mysqli_connect_error());
+  }
+  else {
+      $sql = 'SELECT * FROM match_table';
+      $result = mysqli_query($link, $sql) or die(mysqli_error());
+  }
+  $sql = "SELECT * FROM match_table";
+  $matchInfo = mysqli_query($link, $sql);
+  $matchInfo = mysqli_fetch_assoc($matchInfo);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,6 +82,30 @@
               <!-- The slideshow/carousel -->
               <div class="carousel-inner py-3">
                 <div class="carousel-item">
+                  <?php
+                    if(mysqli_num_rows($result)>0) {
+
+                        while($row = mysqli_fetch_assoc($result)) {
+                      echo'<div class="text-center">' .$matchnum.'</div>
+                      <div class="d-flex justify-content-evenly">
+        
+                      <div class="p-2 py-5" style="color: white;">
+                        <h2>' . $matchInfo['team_one'].'</h2>
+                        
+                      </div>
+                      <div class="p-2 py-5" style="color: white;">
+                        <h1>VS</h1>
+                      </div>
+                      <div class="p-2 py-5" style="color: white;">
+                        <h2>' . $matchInfo['team_two'].'</h2>
+                        
+                      </div>
+                    </div>';
+                        }
+                      }
+                  ?>
+                </div>
+                <!-- <div class="carousel-item active">
                   <div class="d-flex justify-content-evenly">
     
                     <div class="p-2 py-5" style="color: white;">
@@ -83,24 +120,7 @@
                       <p>bbbbb</p>
                     </div>
                   </div>
-            
-                </div>
-                <div class="carousel-item active">
-                  <div class="d-flex justify-content-evenly">
-    
-                    <div class="p-2 py-5" style="color: white;">
-                      <h2>Team 1</h2>
-                      <p>aaaaa</p>
-                    </div>
-                    <div class="p-2 py-5" style="color: white;">
-                      <h1>VS</h1>
-                    </div>
-                    <div class="p-2 py-5" style="color: white;">
-                      <h2>Team 2</h2>
-                      <p>bbbbb</p>
-                    </div>
-                  </div>
-                </div>
+                </div> -->
                 
               </div>
             

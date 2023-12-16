@@ -23,12 +23,12 @@
             echo "ERROR: Could not able to execute $sql." . mysqli_error($link);
         }
 
-        $sql = "SELECT * FROM user_table WHERE user_name = '$username' AND password = '$pass'";
-        $result = $link->query($sql);
+        // $sql = "SELECT * FROM match_table";
+        // $result = $link->query($sql);
 
-        if ($result->num_rows > 0) {
-            $_SESSION['matchNumber'] = $matchNumber;
-        }
+        // if ($result->num_rows > 0) {
+        //     $_SESSION['matchNumber'] = $matchNumber;
+        // }
 
         mysqli_close($link);
     }
