@@ -1,18 +1,12 @@
 <?php 
-  session_start();
- 
   include "connection.php";
 
   if($link == false) {
       die("ERROR: Could not connect. ". mysqli_connect_error());
   }
-  else {
-      $sql = 'SELECT * FROM match_table';
-      $result = mysqli_query($link, $sql) or die(mysqli_error());
-  }
-  $sql = "SELECT * FROM match_table";
-  $matchInfo = mysqli_query($link, $sql);
-  $matchInfo = mysqli_fetch_assoc($matchInfo);
+  
+  $sql = 'SELECT * FROM match_table';
+  $result = mysqli_query($link, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,7 +60,6 @@
       <div class="container pt-5 px-4">
         <div class="row mt-5 pb-4 pt-5">
           <h1 style="color: white; font-weight: bold;">Want to be a part of the Futbol Club?<br>Register now!</h1>
-          
         </div>
         <a href="LoginFolder/signUp.html" role="button" class="loginButton" style="margin-right: 1rem;"> Register</a>
         <a href="LoginFolder/login.html" role="button" class="loginButton"> Login</a>
@@ -77,52 +70,37 @@
         <div class="container py-5 carousell" style="border: solid white;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;background: linear-gradient(to bottom right, #020251 , #f74b0d);">
           <div class="row">
             <div id="exp" class="carousel slide pt-3 text-center" data-bs-ride="carousel">
-              
-            
               <!-- The slideshow/carousel -->
               <div class="carousel-inner py-3">
-                <div class="carousel-item">
-                  <?php
-                    if(mysqli_num_rows($result)>0) {
-
-                        while($row = mysqli_fetch_assoc($result)) {
-                      echo'<div class="text-center">' .$matchnum.'</div>
-                      <div class="d-flex justify-content-evenly">
-        
-                      <div class="p-2 py-5" style="color: white;">
-                        <h2>' . $matchInfo['team_one'].'</h2>
-                        
-                      </div>
-                      <div class="p-2 py-5" style="color: white;">
-                        <h1>VS</h1>
-                      </div>
-                      <div class="p-2 py-5" style="color: white;">
-                        <h2>' . $matchInfo['team_two'].'</h2>
-                        
-                      </div>
-                    </div>';
-                        }
-                      }
-                  ?>
+              <?php
+              if (mysqli_num_rows($result) > 0) {
+                $first = true;
+                while ($row = mysqli_fetch_assoc($result)) {
+                  echo '
+                              <div class="carousel-item' . ($first ? ' active' : '') . '">
+                                <div class="text-center text-white fs-2">'
+                                    . $row['match_number'] . '
+                                </div>
+                                <div class="d-flex justify-content-evenly">
+      
+                                  <div class="p-2 py-5" style="color: white;">
+                                    <h2>' . $row['team_one'] . '</h2>
+                                  </div>
+                                  <div class="p-2 py-5" style="color: white;">
+                                    <h1>VS</h1>
+                                  </div>
+                                  <div class="p-2 py-5" style="color: white;">
+                                    <h2>' . $row['team_two'] . '</h2>
+                                  </div>
+                                </div>
+                              </div>
+                            ';
+                  $first = false;
+                }
+              }
+                ?>
                 </div>
-                <!-- <div class="carousel-item active">
-                  <div class="d-flex justify-content-evenly">
-    
-                    <div class="p-2 py-5" style="color: white;">
-                      <h2>Team 1</h2>
-                      <p>aaaaa</p>
-                    </div>
-                    <div class="p-2 py-5" style="color: white;">
-                      <h1>VS</h1>
-                    </div>
-                    <div class="p-2 py-5" style="color: white;">
-                      <h2>Team 2</h2>
-                      <p>bbbbb</p>
-                    </div>
-                  </div>
-                </div> -->
                 
-              </div>
             
               <!-- Left and right controls/icons -->
               <button class="carousel-control-prev" type="button" data-bs-target="#exp" data-bs-slide="prev">
