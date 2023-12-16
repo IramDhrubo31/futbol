@@ -6,12 +6,12 @@ if (!$_SESSION['username']=="admin"){
 
 include "../connection.php";
 
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+if ($link->connect_error) {
+  die("Connection failed: " . $link->connect_error);
 }
 else{
     $sql = 'select * from contact_list_table';
-    $res = mysqli_query($conn,$sql);
+    $res = mysqli_query($link,$sql);
 }
 ?>
 
@@ -23,8 +23,9 @@ else{
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>List</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css"> -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="contact.css">
 </head>
 
@@ -60,7 +61,7 @@ else{
                 <td>' .$rows["email"].'</td>
                 <td>' .$rows["contact_number"].'</td>
                 <td>' .$rows["contact_message"].'</td>
-                <td class="table-secondary"><a class="btn btn-danger" href='."contactdelete.php?id=".$id.'>Delete</a></td>
+                <td class="table-secondary"><a class="btn btn-danger" href='."../php/contactdelete.php?id=".$id.'>Delete</a></td>
 
             </tr>
                 ';

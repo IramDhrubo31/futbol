@@ -1,8 +1,8 @@
 <?php
-include "connection.php";
+include "../connection.php";
 
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+if ($link->connect_error) {
+  die("Connection failed: " . $link->connect_error);
 }
 else{
     if(isset($_POST['submit'])){
@@ -14,17 +14,17 @@ else{
         $sql="INSERT INTO contact_list_table(`user_name`,`email`,`contact_number`,`contact_message`) VALUES ('$userName','$email', '$contactNum','$message')";
     
     
-    if (mysqli_query($conn, $sql)) {
-      echo 'hii';
+    if (mysqli_query($link, $sql)) {
+    
       //header('location:../Contact_Page/contactPage.php');
 
     } else {
-      echo "<script>alert('Error: '.$sql.'<br>' . mysqli_error($conn))</script>" ;
+      echo "<script>alert('Error: '.$sql.'<br>' . mysqli_error($link))</script>" ;
     }
     
     
     }
 
-    $conn->close();
+    $link->close();
 }
 ?>
