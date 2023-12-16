@@ -1,5 +1,6 @@
 <?php 
     if(isset($_POST['submit'])){
+        session_start();
         $matchNumber=$_POST['matchNumber'];
         $teamOne=$_POST['teamOne'];
         $teamTwo=$_POST['teamTwo'];
@@ -20,6 +21,13 @@
         }
         else {
             echo "ERROR: Could not able to execute $sql." . mysqli_error($link);
+        }
+
+        $sql = "SELECT * FROM user_table WHERE user_name = '$username' AND password = '$pass'";
+        $result = $link->query($sql);
+
+        if ($result->num_rows > 0) {
+            $_SESSION['matchNumber'] = $matchNumber;
         }
 
         mysqli_close($link);
@@ -99,6 +107,12 @@
                 <option value="Match 1">Match 1</option>
                 <option value="Match 2">Match 2</option>
                 <option value="Match 3">Match 3</option>
+                <option value="Match 4">Match 4</option>
+                <option value="Match 5">Match 5</option>
+                <option value="Match 6">Match 6</option>
+                <option value="Match 7">Match 7</option>
+                <option value="Match 8">Match 8</option>
+                <option value="Match 9">Match 9</option>
               </select>
             </div>
 
