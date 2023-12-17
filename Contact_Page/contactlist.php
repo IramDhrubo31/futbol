@@ -29,8 +29,7 @@ if ($link->connect_error) {
 </head>
 
 <body>
-  <section class="list d-flex flex-column align-items-center justify-content-center">
-  <nav class="navbar navbar-expand-md shadow-sm bg-white px-3 sticky-md-top" style="font-size: small; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+<nav class="navbar navbar-expand-md shadow-sm bg-white px-3 sticky-md-top" style="font-size: small; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
       <div class="container-fluid">
         <a class="navbar-brand" href="#Home">
           <img src="../logo/Futb_l-removebg-preview.png" alt="Futbol" height="50">
@@ -62,7 +61,7 @@ if ($link->connect_error) {
         </div>
       </div>
     </nav>
-
+  <section class="list d-flex flex-column align-items-center justify-content-center">
     <h1 class="mb-5 mt-5 text-white"> Contact List</h1>
     <div class="container">
       <div class="table-responsive">

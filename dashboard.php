@@ -21,6 +21,17 @@
   $sqlFetch = "SELECT * FROM player_table WHERE user_name ='$username'";
   $statsInfo = mysqli_query($link, $sqlFetch);
   $statsInfo = mysqli_fetch_assoc($statsInfo);
+
+  // if($statsInfo['goal'] = null){
+  //   $sql = "UPDATE player_table SET goal = '0' WHERE user_name = '$playerName'";
+  //   if(mysqli_query($link, $sql)) {
+  //     //echo "Records updated successfully";
+  //   }
+  //   else {
+  //       echo "ERROR: Could not able to execute $sql." . mysqli_error($link);
+  //   }
+
+  // }
 ?>
 
 
@@ -183,7 +194,12 @@
                             <td>Goal</td>
                             <td>
                               <?php
-                                echo $statsInfo['goal']; 
+                                  if($statsInfo == null){
+                                    echo '0';
+                                  }
+                                  else{
+                                    echo $statsInfo['goal'];
+                                  }
                               ?>
                             </td>
                         </tr>
@@ -191,7 +207,12 @@
                             <td>Assist</td>
                             <td>
                               <?php
-                                echo $statsInfo['assist']; 
+                                if($statsInfo == null){
+                                  echo '0';
+                                }
+                                else{
+                                  echo $statsInfo['assist'];
+                                }
                               ?>
                             </td>
                         </tr>
@@ -199,7 +220,12 @@
                             <td>CleanSheet</td>
                             <td>
                               <?php
-                                echo $statsInfo['clean_sheet']; 
+                                if($statsInfo == null){
+                                  echo '0';
+                                }
+                                else{
+                                  echo $statsInfo['clean_sheet'];
+                                }
                               ?>
                             </td>
                         </tr>
@@ -207,7 +233,12 @@
                             <td>Yellow Card</td>
                             <td>
                               <?php
-                                echo $statsInfo['yellow_card']; 
+                                if($statsInfo == null){
+                                  echo '0';
+                                }
+                                else{
+                                  echo $statsInfo['yellow_card'];
+                                } 
                               ?>
                             </td>
                         </tr>
@@ -215,7 +246,12 @@
                             <td>Red Card</td>
                             <td>
                               <?php
-                                echo $statsInfo['red_card']; 
+                                if($statsInfo == null){
+                                  echo '0';
+                                }
+                                else{
+                                  echo $statsInfo['red_card'];
+                                }
                               ?>
                             </td>
                         </tr>
