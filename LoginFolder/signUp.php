@@ -1,5 +1,3 @@
-<?php session_start();
-?>
 
 <!DOCTYPE html>
 <html>
@@ -34,20 +32,7 @@
                 <div class="container my-5">
                     <div class="row justify-content-center">
                         <div class="col-xl-5 col-md-8 ">
-                            <!-- <?php  
-                                // if(isset($_SESSION['status']) && $_SESSION['status'] != '') {
-
-                                //     ?>
-                                    
-                                //     <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                //         <?php echo $_SESSION['status']; ?>
-                                //         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                //     </div>
-                                //     <?php
-                                //     unset($_SESSION['status']);
-                                // }
-                            ?> -->
-        
+                        
                             <form action="../userRegDataStore.php" method="post" enctype="multipart/form-data"
                                 class="bg-white  rounded-5 shadow-5-strong p-5">
                                 <img src="../logo/Futb_l-removebg-preview.png" class="mx-auto d-block img-fluid" width="50%">

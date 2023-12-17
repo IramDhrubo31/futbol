@@ -22,18 +22,7 @@ else {
 <body class="bg-body-secondary">
     <h1 class="text-center my-5 text-white"><u>Members</u></h1>
     <div class="container-fluid">
-    <!-- <table class="table table-dark table-striped table-hover"> -->
-    <!-- <thead>
-        <tr>
-        <th scope="col">User ID</th>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">Phone Number</th>
-        <th scope="col">Message</th>
-        </tr>
-    </thead>
-    <tbody> -->
+    
         <?php
         echo '<div class="container gap-5 mb-5 d-flex flex-wrap justify-content-center"> ';
         if(mysqli_num_rows($result)>0) {
@@ -53,8 +42,7 @@ else {
         echo '</div>'
         
         ?>
-    <!-- </tbody>
-    </table> -->
+
     </div>
     <footer style="height: 20vh; background-color: black;">
         <div class="container">
