@@ -18,11 +18,8 @@
   $playerInfo = mysqli_query($link, $psql);
   $playerInfo = mysqli_fetch_assoc($playerInfo);
 
-?>
-
-<?php 
   
-  if (isset($_POST['subupPositionmit'])) {
+  if (isset($_POST['upPosition'])) {
     session_start();
     $updateposition = $_POST['updateposition'];
    
@@ -31,11 +28,27 @@
     if($link == false) {
       die("ERROR: Could not connect. ". mysqli_connect_error());
   }
-  $usql= "INSERT INTO ";
+  $usql= "UPDATE player_table SET (position = '$updateposition) WHERE user_name ='$username'";
   // $uRes= mysqli_query($link, $usql);
-
+  mysqli_close($link);
   }
 ?>
+<!-- <?php 
+  
+  // if (isset($_POST['upPosition'])) {
+  //   session_start();
+  //   $updateposition = $_POST['updateposition'];
+   
+  //   include "connection.php";
+
+  //   if($link == false) {
+  //     die("ERROR: Could not connect. ". mysqli_connect_error());
+  // }
+  // $usql= "INSERT INTO player_table(position) VALUES ('$updateposition)";
+  // // $uRes= mysqli_query($link, $usql);
+  // mysqli_close($link);
+  // }
+?> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -146,10 +159,10 @@
                     <button type="button" class="btn btn-success mb-3"  style="border-radius: 10rem; width: 20rem; color: white;" name="upName">Update User Name</button>
                 </div> -->
                 <div class="row ">
-                    <button type="button" class="btn btn-success mb-3"  style="border-radius: 10rem; width: 20rem; color: white;" name="upPass">Password</button>
+                    <button type="button" class="btn btn-success mb-3"  style="border-radius: 10rem; width: 20rem; color: white;" name="upPass">Update Password</button>
                 </div>
                 <div class="row ">
-                    <button type="button" class="btn btn-success mb-3"  style="border-radius: 10rem; width: 20rem; color: white;" name="upPosition">Position</button>
+                    <button type="button" class="btn btn-success mb-3"  style="border-radius: 10rem; width: 20rem; color: white;" name="upPosition" action="pprofile.php" method="post">Update Position</button>
                 </div>
             </div>
         </div>

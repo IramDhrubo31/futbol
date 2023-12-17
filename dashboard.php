@@ -44,7 +44,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" style="align-items: end;" id="navbarNav">
-            <ul class="navbar-nav nav-underline ">
+            <ul class="navbar-nav nav-underline " style="font-size: small; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
               <li class="nav-item">
                 <a type="button" class="nav-link" href="aboutus.html" target="_blank" id="about">ABOUT US</a>
               </li>
@@ -52,13 +52,13 @@
                 <a class="nav-link" href="Contact_Page/contact.html" target="_blank">CONTACT US</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Players">PLAYERS</a>
+                <a class="nav-link" href="members.php" target="_blank">MEMBERS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="fixture.php">FIXTURES</a>
+                <a class="nav-link" href="fixture.php" target="_blank">FIXTURES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="leaderboard.html">LEADERBOARD</a>
+                <a class="nav-link" href="leaderboard.html" target="_blank">LEADERBOARD</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="pprofile.php">PROFILE</a>

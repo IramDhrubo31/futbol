@@ -6,11 +6,6 @@
     
 }
 
-.nav-item{
-    font-size: small;
-    font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 body{
     /* background: linear-gradient(90deg, rgba(40,38,38,1) 10%, rgba(50,46,46,1) 33%, rgba(57,53,53,1) 49%, rgba(84,84,87,0.9725140056022409) 100%); */
     background-image: url('../images/5618236.jpg');

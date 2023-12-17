@@ -21,6 +21,8 @@ if (isset($_POST['submit'])) {
         header('location: ../dashboard.php');
     } else {
         echo "Login unsuccessful. Please check your username and password.";
+        header('Location: login.html');
+
     }
 
     $link->close();
