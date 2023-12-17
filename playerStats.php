@@ -62,13 +62,13 @@
               <a class="nav-link" href="addMatch.php">ADD MATCH</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="updateMatch.html">UPDATE MATCH</a>
+              <a class="nav-link" href="updateMatch.php">UPDATE MATCH</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="fixture.html">FIXTURE</a>
+              <a class="nav-link" href="fixture.php">FIXTURE</a>
             </li>
             <li class="nav-item">
-                  <a class="nav-link" href="Contact_Page/contactlist.html">CONTACT LIST</a>
+                  <a class="nav-link" href="Contact_Page/contactlist.php">CONTACT LIST</a>
             </li>
           </ul>
         </div>
@@ -88,30 +88,30 @@
                 <input type="text" name="playerName" id="playerName" class="form-control" placeholder="Enter a player's name">
             </div>
 
-            <div class="d-flex justify-content-between">
-              <div class="my-4">
+            <div class="row">
+              <div class="col-6 my-4">
                   <label for="goal">Number of Goals</label>
-                  <input type="number" name="goal" id="goal" placeholder="Enter no of goals">
+                  <input type="number" name="goal" id="goal" class="form-control" placeholder="Enter no of goals">
               </div>
 
-              <div class="my-4">
+              <div class="col-6 my-4">
                   <label for="assist">Number of Assists</label>
-                  <input type="number" name="assist" id="assist" placeholder="Enter no of assists">
+                  <input type="number" name="assist" id="assist" class="form-control" placeholder="Enter no of assists">
               </div>
             </div>
 
-            <div class="d-flex justify-content-between">
-                <div class="my-4">
+            <div class="row">
+                <div class="col-4 my-4">
                     <label for="cleanSheet">CleanSheets</label>
                     <input type="checkbox" name="cleanSheet" id="cleanSheet">
                 </div>
     
-                <div class="my-4">
+                <div class="col-4 my-4">
                     <label for="yellowCard">Yellow Card</label>
                     <input type="checkbox" name="yellowCard" id="yellowCard">
                 </div>
     
-                <div class="mt-3 mb-3">
+                <div class="col-4 my-4">
                     <label for="redCard">Red Card</label>
                     <input type="checkbox" name="redCard" id="redCard">
                 </div>
