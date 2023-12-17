@@ -8,7 +8,7 @@
   }
   else {
       $sql = 'SELECT * FROM user_table';
-      $result = mysqli_query($link, $sql) or die(mysqli_error());
+      $result = mysqli_query($link, $sql);
   }
   $sql = "SELECT * FROM user_table WHERE user_name ='$username'";
   $userInfo = mysqli_query($link, $sql);
@@ -60,7 +60,7 @@
     <title>Profile</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg shadow-sm bg-white px-3 sticky-md-top">
+    <nav class="navbar navbar-expand-lg shadow-sm bg-white px-3 sticky-md-top" style="font-size: small; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <img src="logo/Futb_l-removebg-preview.png" alt="Futbol" height="50">
@@ -77,16 +77,16 @@
                 <a class="nav-link" href="Contact_Page/contact.html" target="_blank">CONTACT US</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Players">PLAYERS</a>
+                <a class="nav-link" href="dashboard.php">DASHBOARD</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="fixture.html">FIXTURES</a>
+                <a class="nav-link" href="members.php">MEMBERS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Leaderboard">LEADERBOARD</a>
+                <a class="nav-link" href="fixture.php" target="_blank">FIXTURES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.html">PROFILE</a>
+                <a class="nav-link" href="leaderboard.php" target="_blank">LEADERBOARD</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="index.html">LOGOUT</a>

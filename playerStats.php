@@ -44,7 +44,7 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-md shadow-sm bg-white px-3 sticky-md-top">
+    <nav class="navbar navbar-expand-md shadow-sm bg-white px-3 sticky-md-top" style="font-size: small; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
       <div class="container-fluid">
         <a class="navbar-brand" href="#Home">
           <img src="logo/Futb_l-removebg-preview.png" alt="Futbol" height="50">
@@ -65,7 +65,10 @@
               <a class="nav-link" href="updateMatch.php">UPDATE MATCH</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="fixture.php">FIXTURE</a>
+              <a class="nav-link" href="fixture.php" target="_blank">FIXTURE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="leaderboard.php" target="_blank">LEADERBOARD</a>
             </li>
             <li class="nav-item">
                   <a class="nav-link" href="Contact_Page/contactlist.php">CONTACT LIST</a>

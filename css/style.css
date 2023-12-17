@@ -26,10 +26,6 @@ header{
     position: relative;
 } */
 
-.nav-item{
-    
-    font-weight: 600;
-}
 .loginButton{
     background-color: rgb(28, 146, 44);
     color:  rgb(255, 255, 255);
