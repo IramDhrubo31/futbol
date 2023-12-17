@@ -5,7 +5,7 @@ if($link == false) {
     die("ERROR: Could not connect. ". mysqli_connect_error());
 }
 else {
-    $sql = 'SELECT * FROM user_info';
+    $sql = 'SELECT * FROM user_table';
     $result = mysqli_query($link, $sql) or die(mysqli_error());
 }
 ?>
@@ -16,11 +16,11 @@ else {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/contact_fetch.css">
+    <link rel="stylesheet" href="css/members.css">
     <title>Contact Details</title>
 </head>
 <body class="bg-body-secondary">
-    <h2 class="text-center my-4">Members</h2>
+    <h1 class="text-center my-5 text-white"><u>Members</u></h1>
     <div class="container-fluid">
     <!-- <table class="table table-dark table-striped table-hover"> -->
     <!-- <thead>
@@ -35,27 +35,51 @@ else {
     </thead>
     <tbody> -->
         <?php
+        echo '<div class="container gap-5 mb-5 d-flex flex-wrap justify-content-center"> ';
         if(mysqli_num_rows($result)>0) {
-
+            $count=1;
             while($row = mysqli_fetch_assoc($result)) {
-                echo '<div class="card" style="width: 14rem;">  
-                <div class="card-body">  
-                <div class="card-text text-center">  
-                <h5 class="card-title text-bold">' . $newDate . '</h5>  
-                <h5 class="card-title text-bold">' . $newTime . '</h5>  
-                <h6 class="card-text text-bold">' . $clima->list[$i]->weather[0]->main . '</h6>  
-                <h6 class="card-text">Temperature: ' . $clima->list[$i]->main->temp . '°C</h6>  
-                <h6 class="card-text">Feels like: ' .$clima->list[$i]->main->feels_like . '</h6>   
-                <h6 class="card-text">Humidity: ' . $clima->list[$i]->main->humidity . '</h6>  
-                <h6 class="card-text">Min Temp: ' . $clima->list[$i]->main-> temp_min . '°C</h6> 
-                <h6 class="card-text">Max Temp: ' . $clima->list[$i]->main-> temp_max . '°C</h6>  
-                </div></div></div> '; 
+                
+                echo '<div class="card" style="width: 15rem;">  
+                <div class="card-body text-center">  
+                <img class= "img-fluid" src=" "upload/"'.$row['picture'].'" width=70px alt="Image">
+                </div>
+                <h5 class="card-title text-center">'.$row['name'].'</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary text-center"> Member no. ' . $count++.'</h6>
+                </div>'; 
+               
             }
         }
+        echo '</div>'
         
         ?>
     <!-- </tbody>
     </table> -->
     </div>
+    <footer style="height: 20vh; background-color: black;">
+        <div class="container">
+            <div class="row">
+              <div class="col-6 pt-5">
+                <p style="color: white;"><i class="fa-regular fa-copyright" style="color: #ffffff;"></i>2023 Futbol</p>
+    
+              </div>
+              <div class="col-6 pt-5" style="text-align: end;">
+                <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://gmail.com"><i class="fa-regular fa-envelope"></i></a>
+              </div>
+            
+            </div>
+          </div>
+      </footer>
+
+
+
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

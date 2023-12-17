@@ -64,9 +64,6 @@
                 <a class="nav-link" href="pprofile.php">PROFILE</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="dashboard.php">DASHBOARD</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="index.php">LOGOUT</a>
               </li>
               

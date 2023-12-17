@@ -48,7 +48,7 @@
             <a class="nav-link" href="#Leaderboard">LEADER BOARD</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="LoginFolder/signUp.html">REGISTER</a>
+            <a class="nav-link" href="LoginFolder/signUp.php">REGISTER</a>
           </li>
           
         </ul>
@@ -61,7 +61,7 @@
         <div class="row mt-5 pb-4 pt-5">
           <h1 style="color: white; font-weight: bold;">Want to be a part of the Futbol Club?<br>Register now!</h1>
         </div>
-        <a href="LoginFolder/signUp.html" role="button" class="loginButton" style="margin-right: 1rem;"> Register</a>
+        <a href="LoginFolder/signUp.php" role="button" class="loginButton" style="margin-right: 1rem;"> Register</a>
         <a href="LoginFolder/login.html" role="button" class="loginButton"> Login</a>
         
       </div>

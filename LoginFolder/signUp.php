@@ -1,3 +1,6 @@
+<?php session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -31,6 +34,19 @@
                 <div class="container my-5">
                     <div class="row justify-content-center">
                         <div class="col-xl-5 col-md-8 ">
+                            <!-- <?php  
+                                // if(isset($_SESSION['status']) && $_SESSION['status'] != '') {
+
+                                //     ?>
+                                    
+                                //     <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                //         <?php echo $_SESSION['status']; ?>
+                                //         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                //     </div>
+                                //     <?php
+                                //     unset($_SESSION['status']);
+                                // }
+                            ?> -->
         
                             <form action="../userRegDataStore.php" method="post" enctype="multipart/form-data"
                                 class="bg-white  rounded-5 shadow-5-strong p-5">
@@ -108,99 +124,13 @@
     
     </div>
 
-
-   
-        <!-- <div class="container my-5 px-4">
-            <div class="row m-5 p-5 align-items-center" style="background-color: whitesmoke;">
-                <div class="col-md-6 col-sm-12">
-                    <div class="row text-center">
-                        <img class="" src="/logo/Futb_l-removebg-preview.png" alt="Futbol">
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-sm-12">
-                    <div class="row text-center">
-
-                        <h1>Create Account</h1>
-                    </div>
-                    <div class="row align-items-center">
-                        <div class="container p-5">
-                            <form action="../php/userRegDataStore.php" method="post">
-                                <div class="input-field">
-                                    <input type="text" class="input" name="namee" id="name" required="">
-                                    <label for="name">Name</label>
-                                </div>
-    
-                                <div class="input-field">
-                                    <input type="text" class="input" name="userName" required="" id="username">
-                                    <label for="username">User Name</label>
-                                </div>
-                                <div class="input-field">
-                                    <input type="email" class="input" name="email" id="email" required="">
-                                    <label for="email">Email</label>
-                                </div>
-                                <div class="input-field">
-                                    <input type="number" class="input" name="contactNumber" required="" id="number">
-                                    <label for="number">Contact Number</label>
-                                </div>
-                                <div class="input-field">
-                                    <input type="password" class="input" name="password" required="" id="pass">
-                                    <label for="pass">Password</label>
-                                </div>
-                                <div class="input-field">
-                                    <input type="password" class="input" name="c_password" required="" id="confirmPass" oninput="checkPasswordMatch()">
-                                    <label for="confirmPass">Confirm Password</label>
-                                    <span id="passwordMatchError" class="error-message"></span>
-                                </div>
-    
-                                <div id="chechBox">
-                                    <div class="mb-5 w-50">
-                                        <label for="gender">Gender</label>
-                                        <select gender="gender" name="gender" id="gender" class="form-select-inline">
-                                            <option value="Male">Male</option>
-                                            <option value="Female">Female</option>
-                                        </select>
-                                    </div>
-    
-    
-                                    <div class="mb-5 w-50 ">
-                                        <label for="bloodGroup">Blood Group</label>
-                                        <select gender="bloodGroup" name="bloodGroup" id="bloodGroup" class="form-select-inline">
-                                            <option value="A+">A+</option>
-                                            <option value="O+">O+</option>
-                                            <option value="O-">O-</option>
-                                            <option value="B+">B+</option>
-                                            <option value="B-">B-</option>
-    
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="mb-5 w-50">
-                                    <label for="profileImage">Profile Image</label>
-                                    <input type="file" id="profileImage" name="profileImage" accept="image/*">
-                                </div>
-    
-                                <div class="input-field">
-                                    <input type="submit" class="submit" name="submit" value="submit">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="row text-center">
-                        <span>Already have an account? <a href="login.html">Log in here</a></span>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    
-
     <script>
         function checkPasswordMatch() {
             var password = document.getElementById("pass").value;
             var c_password = document.getElementById("confirmPass").value;
             var errorSpan = document.getElementById("passwordMatchError");
     
-            if (password === c_password) {
+            if (password == c_password) {
                 errorSpan.innerHTML = "Passwords match!";
                
             } else {
