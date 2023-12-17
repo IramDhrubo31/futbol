@@ -13,10 +13,28 @@
   $sql = "SELECT * FROM user_table WHERE user_name ='$username'";
   $userInfo = mysqli_query($link, $sql);
   $userInfo = mysqli_fetch_assoc($userInfo);
+
+  $psql= "SELECT * FROM player_table WHERE user_name ='$username'";
+  $playerInfo = mysqli_query($link, $psql);
+  $playerInfo = mysqli_fetch_assoc($playerInfo);
+
 ?>
 
 <?php 
-  include "connection.php";
+  
+  if (isset($_POST['subupPositionmit'])) {
+    session_start();
+    $updateposition = $_POST['updateposition'];
+   
+    include "connection.php";
+
+    if($link == false) {
+      die("ERROR: Could not connect. ". mysqli_connect_error());
+  }
+  $usql= "INSERT INTO ";
+  // $uRes= mysqli_query($link, $usql);
+
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,30 +93,28 @@
         </div>
         <div class="row pb-3"
             style=" background: linear-gradient(90deg, rgba(40,38,38,1) 10%, rgba(50,46,46,1) 33%, rgba(57,53,53,1) 49%, rgba(84,84,87,0.9725140056022409) 100%); border-bottom: solid whitesmoke;">
-            <div class="col-md-4 col-sm-12 py-5" >
-                <img>
+            <div class="col-md-4 col-sm-12 py-5 text-center" >
+              <img src="<?php echo "upload/".$userInfo['picture']; ?>" width=300rem alt="Image">
     
             </div>
             <div class="col-md-8 col-sm-12 py-5"  style="color: white;">
                 <div class="row mb-3">
-                    <labe>Name:</labe>
-                    <label></label>
+                    <label>Name: <span class="lead info ps-2"><?php echo $userInfo['name'];?></span></label>
                 </div>
+
                 <div class="row mb-3">
-                    <labe>User Name:</labe>
-                    <label></label>
+                    <label>user name: <span class="lead info ps-2"> <?php echo $username;?></span></label>
                 </div>
                 <!-- <div class="row mb-3">
                     <labe>userID:</labe>
                     <label></label>
                 </div> -->
                 <div class="row mb-3">
-                    <labe>Email:</labe>
-                    <label></label>
+                    <label>Email: <span class="lead info ps-2"><?php echo $userInfo['email']; ?></span?</label>
                 </div>
                 <div class="row">
-                    <labe>Position:</labe>
-                    <label></label>
+                    <labe>Position:<span class="lead info ps-2"><?php echo $playerInfo['position'] ?></span></labe>
+                   
                 </div>
             </div>
     
@@ -112,9 +128,9 @@
                 <div class="row justify-content-end mb-3">
                     <input required type="text" class="form-control shadow-sm" placeholder="Enter Updated Name" aria-label="updatename" name="updatename" style="width: 25rem;">
                 </div>
-                <div class="row justify-content-end mb-3">
+                <!-- <div class="row justify-content-end mb-3">
                     <input required type="text" class="form-control shadow-sm" placeholder="Enter Updated user Name" aria-label="updateusername" name="updateusername" style="width: 25rem;">
-                </div>
+                </div> -->
                 <div class="row justify-content-end mb-3">
                     <input required type="text" class="form-control shadow-sm" placeholder="Enter Updated Password" aria-label="updatepass" name="updatepass" style="width: 25rem;">
                 </div>
@@ -124,16 +140,16 @@
             </div>
             <div class="col-5 ps-5">
                 <div class="row ">
-                    <button type="button" class="btn btn-success mb-3"  style="border-radius: 10rem; width: 20rem; color: white;">Update Name</button>
+                    <button type="button" class="btn btn-success mb-3"  style="border-radius: 10rem; width: 20rem; color: white;" name="upName">Update Name</button>
+                </div>
+                <!-- <div class="row ">
+                    <button type="button" class="btn btn-success mb-3"  style="border-radius: 10rem; width: 20rem; color: white;" name="upName">Update User Name</button>
+                </div> -->
+                <div class="row ">
+                    <button type="button" class="btn btn-success mb-3"  style="border-radius: 10rem; width: 20rem; color: white;" name="upPass">Password</button>
                 </div>
                 <div class="row ">
-                    <button type="button" class="btn btn-success mb-3"  style="border-radius: 10rem; width: 20rem; color: white;">Update User Name</button>
-                </div>
-                <div class="row ">
-                    <button type="button" class="btn btn-success mb-3"  style="border-radius: 10rem; width: 20rem; color: white;">Password</button>
-                </div>
-                <div class="row ">
-                    <button type="button" class="btn btn-success mb-3"  style="border-radius: 10rem; width: 20rem; color: white;">Position</button>
+                    <button type="button" class="btn btn-success mb-3"  style="border-radius: 10rem; width: 20rem; color: white;" name="upPosition">Position</button>
                 </div>
             </div>
         </div>
