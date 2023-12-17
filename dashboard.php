@@ -13,6 +13,10 @@
   $sql = "SELECT * FROM user_table WHERE user_name ='$username'";
   $userInfo = mysqli_query($link, $sql);
   $userInfo = mysqli_fetch_assoc($userInfo);
+
+  $sqlFetch = "SELECT * FROM player_table WHERE user_name ='$username'";
+  $statsInfo = mysqli_query($link, $sqlFetch);
+  $statsInfo = mysqli_fetch_assoc($statsInfo);
 ?>
 
 
@@ -179,19 +183,43 @@
                     <tbody>
                         <tr>
                             <td>Goal</td>
-                            <td></td>
+                            <td>
+                              <?php
+                                echo $statsInfo['goal']; 
+                              ?>
+                            </td>
                         </tr>
                         <tr>
                             <td>Assist</td>
-                            <td></td>
+                            <td>
+                              <?php
+                                echo $statsInfo['assist']; 
+                              ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CleanSheet</td>
+                            <td>
+                              <?php
+                                echo $statsInfo['clean_sheet']; 
+                              ?>
+                            </td>
                         </tr>
                         <tr>
                             <td>Yellow Card</td>
-                            <td></td>
+                            <td>
+                              <?php
+                                echo $statsInfo['yellow_card']; 
+                              ?>
+                            </td>
                         </tr>
                         <tr>
                             <td>Red Card</td>
-                            <td></td>
+                            <td>
+                              <?php
+                                echo $statsInfo['red_card']; 
+                              ?>
+                            </td>
                         </tr>
                     </tbody>
 
