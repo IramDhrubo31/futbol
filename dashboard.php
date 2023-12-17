@@ -17,6 +17,10 @@
 
   $msql = 'SELECT * FROM match_table';
   $mresult = mysqli_query($link, $msql);
+
+  $sqlFetch = "SELECT * FROM player_table WHERE user_name ='$username'";
+  $statsInfo = mysqli_query($link, $sqlFetch);
+  $statsInfo = mysqli_fetch_assoc($statsInfo);
 ?>
 
 

@@ -1,9 +1,9 @@
 <?php
     if(isset($_POST['submit'])){
         $playerName = $_POST['playerName'];
-        $redCardInput = isset($_POST['redCard']) ? (int)$_POST['redCard'] : 0;
-        $yellowCardInput = isset($_POST['yellowCard']) ? (int)$_POST['yellowCard'] : 0;
-        $cleanSheetInput = isset($_POST['cleanSheet']) ? (int)$_POST['cleanSheet'] : 0;
+        $redCardInput = isset($_POST['redCard']) ? 1 : 0;
+        $yellowCardInput = isset($_POST['yellowCard']) ? 1 : 0;
+        $cleanSheetInput = isset($_POST['cleanSheet']) ? 1 : 0;
         $assistInput = (int)$_POST['assist'];
         $goalInput = (int)$_POST['goal'];
 
@@ -19,9 +19,9 @@
 
         $updatedGoal = $updatePlayerInfo['goal'] + $goalInput;
         $updatedAssist = $updatePlayerInfo['assist'] + $assistInput;
-        $updatedCleanSheet = (int) ($updatePlayerInfo['clean_sheet'] ?? 0) + $cleanSheetInput;
-        $updatedRedCard = (int) ($updatePlayerInfo['red_card'] ?? 0) + $redCardInput;
-        $updatedYellowCard = (int) ($updatePlayerInfo['yellow_card'] ?? 0) + $yellowCardInput;
+        $updatedCleanSheet = (int)($updatePlayerInfo['clean_sheet'] ?? 0)  + $cleanSheetInput;
+        $updatedRedCard = (int)($updatePlayerInfo['red_card'] ?? 0) + $redCardInput;
+        $updatedYellowCard = (int)($updatePlayerInfo['yellow_card'] ?? 0) + $yellowCardInput;
 
         $sql = "UPDATE player_table SET goal = '$updatedGoal', assist = '$updatedAssist', clean_sheet = '$updatedCleanSheet', red_card = '$updatedRedCard', yellow_card = '$updatedYellowCard'  WHERE user_name = '$playerName'";
 
@@ -120,12 +120,6 @@
             <div class="text-center mb-3">
                 <input type="submit" class="submit px-3 py-1 rounded-4 mt-4" name="submit" value="UPDATE INFO">
             </div>
-
-            <?php
-              if(isset($_POST['submit'])){
-                echo $updatedRedCard;
-              }
-            ?>
           </form>
         </div>
       </div>
