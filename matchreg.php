@@ -61,10 +61,10 @@
             <a class="nav-link" href="members.php">MEMBERS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="fixture.php">FIXTURES</a>
+            <a class="nav-link" href="fixture.php" target="_blank">FIXTURES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="leaderboard.php">LEADERBOARD</a>
+            <a class="nav-link" href="leaderboard.php" target="_blank">LEADERBOARD</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="index.html">LOGOUT</a>

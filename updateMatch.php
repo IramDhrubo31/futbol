@@ -63,7 +63,10 @@
                         <a class="nav-link" href="playerStats.php">PLAYER STATS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="fixture.php">FIXTURE</a>
+                        <a class="nav-link" href="fixture.php" target="_blank">FIXTURE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="leaderboard.php" target="_blank">LEADERBOARD</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Contact_Page/contactlist.php">CONTACT LIST</a>
