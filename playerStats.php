@@ -44,7 +44,7 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-md shadow-sm bg-white px-3 sticky-md-top">
+    <nav class="navbar navbar-expand-md shadow-sm bg-white px-3 sticky-md-top" style="font-size: small; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
       <div class="container-fluid">
         <a class="navbar-brand" href="#Home">
           <img src="logo/Futb_l-removebg-preview.png" alt="Futbol" height="50">

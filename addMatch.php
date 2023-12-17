@@ -45,7 +45,7 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-md shadow-sm bg-white px-3 sticky-md-top">
+    <nav class="navbar navbar-expand-md shadow-sm bg-white px-3 sticky-md-top" style="font-size: small; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
       <div class="container-fluid">
         <a class="navbar-brand" href="#Home">
           <img src="logo/Futb_l-removebg-preview.png" alt="Futbol" height="50">
@@ -59,24 +59,21 @@
             <li class="nav-item">
               <a class="nav-link" href="adminPortal.html">ADMIN PORTAL</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#addMatch">ADD MATCH</a>
-            </li> -->
             <li class="nav-item">
-              <a class="nav-link" href="updateMatch.html">UPDATE MATCH</a>
+              <a class="nav-link" href="updateMatch.php">UPDATE MATCH</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">PLAYERS</a>
+              <a class="nav-link" href="playerStats.php">PLAYER STATS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="fixture.html">FIXTURE</a>
+              <a class="nav-link" href="fixture.php" target="_blank">FIXTURE</a>
             </li>
             <li class="nav-item">
-                  <a class="nav-link" href="Contact_Page/contactlist.html">CONTACT LIST</a>
+                  <a class="nav-link" href="leaderboard.php">LEADERBOARD</a>
             </li>
-            <!-- <li class="nav-item">
-                  <a class="nav-link" href="#Register">REGISTER</a>
-                </li> -->
+            <li class="nav-item">
+                  <a class="nav-link" href="Contact_Page/contactlist.php">CONTACT LIST</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -135,7 +132,7 @@
             <div class="mt-2">
               <label for="score" class="fs-5">Score</label>
               <select name="score" id="score" class="form-select" aria-label="Default select example">
-                <option value="0-0" selected>0-0</option>
+                <option value="0-0" disabled selected>0-0</option>
               </select>
             </div>
 

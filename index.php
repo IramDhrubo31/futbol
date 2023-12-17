@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg shadow-sm bg-white px-3 sticky-md-top">
+  <nav class="navbar navbar-expand-lg shadow-sm bg-white px-3 sticky-md-top" style="font-size: small; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="logo/Futb_l-removebg-preview.png" alt="Futbol" height="50">
@@ -39,18 +39,17 @@
             <a class="nav-link" href="Contact_Page/contact.html" target="_blank">CONTACT US</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#Players">PLAYERS</a>
+            <a class="nav-link" href="members.php">MEMBERS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="fixture.html" target="_blank">FIXTURES</a>
+            <a class="nav-link" href="fixture.php" target="_blank">FIXTURES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Leaderboard">LEADER BOARD</a>
+            <a class="nav-link" href="Leaderboard.php" target="_blank">LEADERBOARD</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="LoginFolder/signUp.html">REGISTER</a>
           </li>
-          
         </ul>
       </div>
     </div>

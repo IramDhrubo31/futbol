@@ -11,7 +11,7 @@
 </head>
 <body style="background: linear-gradient(90deg, rgba(40,38,38,1) 10%, rgba(50,46,46,1) 33%, rgba(57,53,53,1) 49%, rgba(84,84,87,0.9725140056022409) 100%);">
   <header>
-    <nav class="navbar navbar-expand-md shadow-sm bg-white px-3 sticky-md-top">
+    <nav class="navbar navbar-expand-md shadow-sm bg-white px-3 sticky-md-top" style="font-size: small; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
       <div class="container-fluid">
         <a class="navbar-brand" href="#Home">
           <img src="logo/Futb_l-removebg-preview.png" alt="Futbol" height="50">
@@ -25,22 +25,25 @@
               <a class="nav-link" href="aboutus.html" target="_blank">ABOUT US</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="addMatch.php" target="_blank">ADD MATCH</a>
+              <a class="nav-link" href="addMatch.php">ADD MATCH</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="updateMatch.php" target="_blank">UPDATE MATCH</a>
+              <a class="nav-link" href="updateMatch.php">UPDATE MATCH</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="playerStats.php" target="_blank">PLAYER STATS</a>
+              <a class="nav-link" href="playerStats.php">PLAYER STATS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="fixture.php" target="_blank">FIXTURE</a>
+              <a class="nav-link" href="fixture.php">FIXTURE</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Contact_Page/contactlist.php" target="_blank">CONTACT LIST</a>
+              <a class="nav-link" href="leaderboard.php">LEADERBOARD</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="adminLogin.html">Log Out</a>
+              <a class="nav-link" href="Contact_Page/contactlist.php">CONTACT LIST</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="adminLogin.html">LOG OUT</a>
             </li>
           </ul>
         </div>
@@ -83,7 +86,7 @@
               <div class="card-body">
                 <h5 class="card-title">UPDATE MATCH SCORE</h5>
                 <p class="card-text">Here you can update the score of a live match</p>
-                <a href="updateMatch.html" class="text-decoration-none"><button class="matchButton mx-auto d-block px-3 py-1 rounded-4">UPDATE LIVE MATCH</button></a>
+                <a href="updateMatch.php" class="text-decoration-none"><button class="matchButton mx-auto d-block px-3 py-1 rounded-4">UPDATE LIVE MATCH</button></a>
               </div>
             </div>
           </div>
@@ -114,9 +117,9 @@
             <div class="card h-100">
               <img src="images/players_image_for_admin_page.jpg" class="card-img-top h-100" alt="...">
               <div class="card-body">
-                <h5 class="card-title">PLAYERS</h5>
-                <p class="card-text">Here you can view and edit the players.</p>
-                <a href="#" class="text-decoration-none"><button class="matchButton mx-auto d-block px-3 py-1 rounded-4" disabled>VIEW PLAYERS</button></a>
+                <h5 class="card-title">PLAYER STATS</h5>
+                <p class="card-text">Here you can edit a player's statistics.</p>
+                <a href="playerStats.php" class="text-decoration-none"><button class="matchButton mx-auto d-block px-3 py-1 rounded-4" >UPDATE PLAYER STATS</button></a>
               </div>
             </div>
           </div>

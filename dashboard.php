@@ -8,7 +8,7 @@
   }
   else {
       $sql = 'SELECT * FROM user_table';
-      $result = mysqli_query($link, $sql) or die(mysqli_error());
+      $result = mysqli_query($link, $sql);
   }
   $sql = "SELECT * FROM user_table WHERE user_name ='$username'";
   $userInfo = mysqli_query($link, $sql);

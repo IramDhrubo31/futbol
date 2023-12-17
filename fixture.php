@@ -7,7 +7,7 @@ if($link == false) {
 }
 else {
     $sql = 'SELECT * FROM match_table';
-    $result = mysqli_query($link, $sql) or die(mysqli_error());
+    $result = mysqli_query($link, $sql);
 }
 ?> 
 
@@ -23,41 +23,10 @@ else {
     <title>Fixtures</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg shadow-sm bg-white px-3 sticky-md-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="logo/Futb_l-removebg-preview.png" alt="Futbol" height="50">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" style="align-items: end;" id="navbarNav">
-            <ul class="navbar-nav nav-underline ">
-              <li class="nav-item">
-                <a type="button" class="nav-link" href="aboutus.html" target="_blank" id="about">ABOUT US</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Contact_Page/contact.html" target="_blank">CONTACT US</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Players">PLAYERS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="fixture.html">FIXTURES</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Leaderboard">LEADER BOARD</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">LOGOUT</a>
-              </li>
-              
-            </ul>
-          </div>
-        </div>
-      </nav>
-
       <div class="container py-5">
+        <div class="text-center mb-2">
+          <h1 class="text-white"><u>FIXTURE</u></h1>
+        </div>
         <div class="row">
             <div class="col">
                 <table class="table table-success table-striped px-3">
