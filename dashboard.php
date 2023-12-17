@@ -13,6 +13,10 @@
   $sql = "SELECT * FROM user_table WHERE user_name ='$username'";
   $userInfo = mysqli_query($link, $sql);
   $userInfo = mysqli_fetch_assoc($userInfo);
+
+
+  $msql = 'SELECT * FROM match_table';
+  $mresult = mysqli_query($link, $msql);
 ?>
 
 
@@ -81,41 +85,38 @@
                 
                   <!-- The slideshow/carousel -->
                   <div class="carousel-inner py-3">
-                    <div class="carousel-item">
-                      <div class="d-flex justify-content-evenly">
-        
-                        <div class="p-2 py-5" style="color: white;">
-                          <h2>Team 1</h2>
-                          <p>aaaaa</p>
-                        </div>
-                        <div class="p-2 py-5" style="color: white;">
-                          <h1>VS</h1>
-                        </div>
-                        <div class="p-2 py-5" style="color: white;">
-                          <h2>Team 2</h2>
-                          <p>bbbbb</p>
-                        </div>
-                      </div>
-                
-                    </div>
-                    <div class="carousel-item active">
-                      <div class="d-flex justify-content-evenly">
-        
-                        <div class="p-2 py-5" style="color: white;">
-                          <h2>Team 1</h2>
-                          <p>aaaaa</p>
-                        </div>
-                        <div class="p-2 py-5" style="color: white;">
-                          <h1>VS</h1>
-                        </div>
-                        <div class="p-2 py-5" style="color: white;">
-                          <h2>Team 2</h2>
-                          <p>bbbbb</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                  </div>
+              <?php
+              if (mysqli_num_rows($mresult) > 0) {
+                $first = true;
+                while ($row = mysqli_fetch_assoc($mresult)) {
+                  echo '
+                              <div class="carousel-item' . ($first ? ' active' : '') . '">
+                                <div class="text-center text-white fs-2">'
+                                    . $row['match_number'] . '
+                                </div>
+                                <div class="d-flex justify-content-evenly">
+      
+                                  <div class="p-2 py-5" style="color: white;">
+                                    <h2>' . $row['team_one'] . '</h2>
+                                  </div>
+                                  <div class="p-2 py-5" style="color: white;">
+                                    <h1>VS</h1>
+                                  </div>
+                                  <div class="p-2 py-5" style="color: white;">
+                                    <h2>' . $row['team_two'] . '</h2>
+                                  </div>
+                                </div>
+                                <div class="pt-2 text-white fs-4">
+                                  <div>'. $row['match_date'] . '</div>
+                                  <div>'. $row['match_time'] . '</div>
+                                </div>
+                              </div>
+                            ';
+                  $first = false;
+                }
+              }
+                ?>
+                </div>
                 
                   <!-- Left and right controls/icons -->
                   <button class="carousel-control-prev" type="button" data-bs-target="#exp" data-bs-slide="prev" style="height: 40vh;">
