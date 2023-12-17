@@ -23,21 +23,13 @@
 #contact-popup{
     margin-top: 40px;
 }
-
-body {
-    font-family: Arial, sans-serif;
-}
-
 body{
     background-image: url("background.png");
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-}
-.btn {
-    background-color: rgb(2, 2, 85);
-    color: white;
+    font-family: Arial, sans-serif;
 }
 #content{
     color: rgb(95, 91, 90);
