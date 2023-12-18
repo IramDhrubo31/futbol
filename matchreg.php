@@ -59,7 +59,7 @@
             <a class="nav-link" href="Contact_Page/contact.html" target="_blank">CONTACT US</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="members.php">MEMBERS</a>
+            <a class="nav-link" href="members.php" target="_blank">MEMBERS</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="fixture.php" target="_blank">FIXTURES</a>
