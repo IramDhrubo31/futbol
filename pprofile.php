@@ -107,7 +107,7 @@ if (isset($_POST['upContact'])) {
             <a class="nav-link" href="leaderboard.php" target="_blank">LEADERBOARD</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html">LOGOUT</a>
+            <a class="nav-link" href="index.php">LOGOUT</a>
           </li>
 
         </ul>

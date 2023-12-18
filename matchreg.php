@@ -59,6 +59,9 @@
             <a class="nav-link" href="Contact_Page/contact.html" target="_blank">CONTACT US</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="dashboard.php">DASHBOARD</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="members.php" target="_blank">MEMBERS</a>
           </li>
           <li class="nav-item">
@@ -68,7 +71,10 @@
             <a class="nav-link" href="leaderboard.php" target="_blank">LEADERBOARD</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html">LOGOUT</a>
+                <a class="nav-link" href="pprofile.php">PROFILE</a>
+              </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php">LOGOUT</a>
           </li>
           
         </ul>
