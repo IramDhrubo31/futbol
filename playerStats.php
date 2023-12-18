@@ -87,8 +87,8 @@
             <h3 class="text-center mt-3">Edit a Player's Statistics</h3>
             
             <div class="my-3">
-                <label for="playerName">Enter a player name</label>
-                <input type="text" name="playerName" id="playerName" class="form-control" placeholder="Enter a player's name">
+                <label for="playerName">Enter a player's username</label>
+                <input type="text" name="playerName" id="playerName" class="form-control" placeholder="Enter a player's username">
             </div>
 
             <div class="row">

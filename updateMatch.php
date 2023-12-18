@@ -124,7 +124,7 @@
                                 <select name="teamB" id="teamB" class="form-select" aria-label="Default select example">
                                     <!-- <option value="" disabled selected>Select an option</option> -->
                                     <option value="CSC101">CSC101</option>
-                                    <option value="CSC203">CSC203</option>
+                                    <option value="CSC203" selected>CSC203</option>
                                 </select>
                             </div>
 
