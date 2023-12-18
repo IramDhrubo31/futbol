@@ -17,19 +17,11 @@
         $sql = "INSERT INTO match_table(match_number, team_one, team_two, match_date, match_time, score) VALUES ('$matchNumber', '$teamOne', '$teamTwo', '$date', '$time', '$score')";
 
         if(mysqli_query($link, $sql)) {
-            // header('location: ../addMatch.html');
+          
         }
         else {
             echo "ERROR: Could not able to execute $sql." . mysqli_error($link);
         }
-
-        // $sql = "SELECT * FROM match_table";
-        // $result = $link->query($sql);
-
-        // if ($result->num_rows > 0) {
-        //     $_SESSION['matchNumber'] = $matchNumber;
-        // }
-
         mysqli_close($link);
     }
 ?>
@@ -43,7 +35,7 @@
     <link rel="stylesheet" href="css/addMatch.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body>
+<body class="bg-info bg-opacity-50">
   <header>
     <nav class="navbar navbar-expand-md shadow-sm bg-white px-3 sticky-md-top" style="font-size: small; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
       <div class="container-fluid">
@@ -132,7 +124,7 @@
             <div class="mt-2">
               <label for="score" class="fs-5">Score</label>
               <select name="score" id="score" class="form-select" aria-label="Default select example">
-                <option value="0-0" disabled selected>0-0</option>
+                <option value="0-0" selected>0-0</option>
               </select>
             </div>
 
@@ -140,22 +132,49 @@
               <!-- <button class="px-3 py-1 rounded-4 mt-4">CREATE MATCH</button> -->
               <input type="submit" class="submit px-3 py-1 rounded-4 mt-4" name="submit" value="CREATE MATCH">
             </div>
-
-            <?php 
-              if(isset($_POST['submit'])){
-                echo 'record added successfully';
-              }
-            ?>
           </form>
+          <?php 
+            if(isset($_POST['submit'])){
+              echo '<div class="d-flex justify-content-end">
+                      <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header bg-success bg-opacity-100 text-white">
+                            <strong class="me-auto">Success</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body bg-success bg-opacity-75 text-white fw-bold">
+                            Match has been added successfully!
+                        </div>
+                      </div>
+                    </div>';
+            }
+          ?>
+          <!-- <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button> -->
+
+          <!-- <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <img src="..." class="rounded me-2" alt="...">
+                <strong class="me-auto">Bootstrap</strong>
+                <small>11 mins ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                Hello, world! This is a toast message.
+              </div>
+            </div>
+          </div> -->
         </div>
       </div>
     </div>
   <!-- </section> -->
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Activate the toast using Bootstrap's JavaScript
+    var toastEl = document.querySelector('.toast');
+    var toast = new bootstrap.Toast(toastEl);
+    toast.show();
+  </script>
 </body>
 </html>
