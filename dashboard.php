@@ -44,6 +44,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Dashboard</title>
+    <link rel="icon" href="logo/football_1165249.png">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg shadow-sm bg-white px-3 sticky-md-top">

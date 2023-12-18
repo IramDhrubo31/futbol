@@ -63,22 +63,7 @@ if (isset($_POST['upPosition'])) {
   mysqli_close($link);
 }
 ?>
-<!-- <?php
 
-      // if (isset($_POST['upPosition'])) {
-      //   session_start();
-      //   $updateposition = $_POST['updateposition'];
-
-      //   include "connection.php";
-
-      //   if($link == false) {
-      //     die("ERROR: Could not connect. ". mysqli_connect_error());
-      // }
-      // $usql= "INSERT INTO player_table(position) VALUES ('$updateposition)";
-      // // $uRes= mysqli_query($link, $usql);
-      // mysqli_close($link);
-      // }
-      ?> -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,6 +74,7 @@ if (isset($_POST['upPosition'])) {
   <link rel="stylesheet" href="css/pprofile.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <title>Profile</title>
+  <link rel="icon" href="logo/football_1165249.png">
 </head>
 
 <body>

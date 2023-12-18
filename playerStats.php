@@ -39,6 +39,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Player Stats</title>
+    <link rel="icon" href="logo/football_1165249.png">
     <link rel="stylesheet" href="css/addMatch.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
