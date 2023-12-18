@@ -1,3 +1,19 @@
+<?php
+  include "connection.php";
+  if ($link->connect_error) {
+    die("Connection failed: " . $link->connect_error);
+  } 
+  else {
+    $sql = 'SELECT * FROM player_table ORDER BY goal DESC';
+    $topGoals = mysqli_query($link, $sql);
+    
+    $sql = 'SELECT * FROM player_table ORDER BY assist DESC';
+    $topAssist = mysqli_query($link, $sql);
+    
+    $sql = 'SELECT * FROM player_table ORDER BY clean_sheet DESC';
+    $topCleanSheet = mysqli_query($link, $sql);
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,21 +49,19 @@
         </thead>
 
         <tbody>
-          <tr>
-            <td><img src="images/cup.png" alt="Persons Icon" />1</td>
-            <td><img src="images/playerIcon.png" alt="Persons Icon" />user1</td>
-            <td>200</td>
-          </tr>
-          <tr>
-            <td><img src="images/Rankicon.png" alt="Persons Icon" />2</td>
-            <td><img src="images/playerIcon.png" alt="Persons Icon" />user2</td>
-            <td>300</td>
-          </tr>
-          <tr>
-            <td><img src="images/rankthree.png" alt="Persons Icon" />3</td>
-            <td><img src="images/playerIcon.png" alt="Persons Icon" />user3</td>
-            <td>300</td>
-          </tr>
+          <?php
+              if (mysqli_num_rows($topGoals) > 0) {
+                $rank = 1;
+                while ($rows = mysqli_fetch_assoc($topGoals)) {
+                  echo ' <tr>
+                  <td><img src="images/cup.png" alt="Persons Icon" />' . $rank++ . '</td>
+                  <td><img src="images/playerIcon.png" alt="Persons Icon" />' . $rows["user_name"] . '</td>
+                  <td>' . $rows["goal"] . '</td>
+              </tr>
+                  ';
+                }
+              }
+          ?>
         </tbody>
       </table>
     </div>
@@ -73,21 +87,19 @@
         </thead>
 
         <tbody>
-          <tr>
-            <td><img src="images/cup.png" alt="Persons Icon" />user1</td>
-            <td><img src="images/playerIcon.png" alt="Persons Icon" />user1</td>
-            <td>200</td>
-          </tr>
-          <tr>
-            <td><img src="images/Rankicon.png" alt="Persons Icon" />1</td>
-            <td><img src="images/playerIcon.png" alt="Persons Icon" />user1</td>
-            <td>300</td>
-          </tr>
-          <tr>
-            <td><img src="images/rankthree.png" alt="Persons Icon" />1</td>
-            <td><img src="images/playerIcon.png" alt="Persons Icon" />user1</td>
-            <td>300</td>
-          </tr>
+          <?php
+              if (mysqli_num_rows($topAssist) > 0) {
+                $rank = 1;
+                while ($rows = mysqli_fetch_assoc($topAssist)) {
+                  echo ' <tr>
+                  <td><img src="images/cup.png" alt="Persons Icon" />' . $rank++ . '</td>
+                  <td><img src="images/playerIcon.png" alt="Persons Icon" />' . $rows["user_name"] . '</td>
+                  <td>' . $rows["assist"] . '</td>
+              </tr>
+                  ';
+                }
+              }
+          ?>
         </tbody>
       </table>
     </div>
@@ -113,21 +125,19 @@
         </thead>
 
         <tbody>
-          <tr>
-            <td><img src="images/cup.png" alt="Persons Icon" />1</td>
-            <td><img src="images/playerIcon.png" alt="Persons Icon" />user1</td>
-            <td>200</td>
-          </tr>
-          <tr>
-            <td><img src="images/Rankicon.png" alt="Persons Icon" />2</td>
-            <td><img src="images/playerIcon.png" alt="Persons Icon" />user2</td>
-            <td>300</td>
-          </tr>
-          <tr>
-            <td><img src="images/rankthree.png" alt="Persons Icon" />3</td>
-            <td><img src="images/playerIcon.png" alt="Persons Icon" />user3</td>
-            <td>300</td>
-          </tr>
+          <?php
+                if (mysqli_num_rows($topCleanSheet) > 0) {
+                  $rank = 1;
+                  while ($rows = mysqli_fetch_assoc($topCleanSheet)) {
+                    echo ' <tr>
+                    <td><img src="images/cup.png" alt="Persons Icon" />' . $rank++ . '</td>
+                    <td><img src="images/playerIcon.png" alt="Persons Icon" />' . $rows["user_name"] . '</td>
+                    <td>' . $rows["clean_sheet"] . '</td>
+                </tr>
+                    ';
+                  }
+                }
+          ?>
         </tbody>
       </table>
     </div>
