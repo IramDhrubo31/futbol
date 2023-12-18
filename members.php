@@ -17,7 +17,9 @@ else {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/members.css">
-    <title>Contact Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Members</title>
+    <link rel="icon" href="logo/football_1165249.png">
 </head>
 <body class="bg-body-secondary">
     <h1 class="text-center my-5 text-white"><u>Members</u></h1>

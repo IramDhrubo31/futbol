@@ -44,6 +44,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Dashboard</title>
+    <link rel="icon" href="logo/football_1165249.png">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg shadow-sm bg-white px-3 sticky-md-top">
@@ -69,7 +70,7 @@
                 <a class="nav-link" href="fixture.php" target="_blank">FIXTURES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="leaderboard.html" target="_blank">LEADERBOARD</a>
+                <a class="nav-link" href="leaderboard.php" target="_blank">LEADERBOARD</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="pprofile.php">PROFILE</a>
@@ -152,7 +153,7 @@
             <div class="col-md-4 col-sm-12 py-5" style="font-family: Verdana, Geneva, Tahoma, sans-serif; border-radius: 3px; border: solid gray; background-color: whitesmoke; border-radius: 5px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
         
               <div class="row mb-3 text-center">
-                <img src="<?php echo "upload/".$userInfo['picture']; ?>" width=70px alt="Image">
+                <img class="img-fluid" src="<?php echo "upload/".$userInfo['picture']; ?>" width=70px alt="Image">
                 
                 </div>
                 <div class="row mb-2">

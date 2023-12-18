@@ -21,6 +21,7 @@ else {
     <link rel="stylesheet" href="css/fixture.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Fixtures</title>
+    <link rel="icon" href="logo/football_1165249.png">
 </head>
 <body>
       <div class="container py-5">
