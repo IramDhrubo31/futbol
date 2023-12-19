@@ -31,7 +31,6 @@
 <body>
 
   <div class="container">
-
     <h2 class="headline">
       <img src="images/headline.png" alt="Persons Icon" />
       <span style="background-color: rgb(227, 142, 15); padding: 10px; font-weight: 900;">TOP SCORERS</span>
@@ -63,10 +62,10 @@
               }
           ?>
         </tbody>
+        
       </table>
     </div>
   </div>
-
 
   <div class="container">
 
@@ -107,13 +106,11 @@
 
 
   <div class="container">
-
     <h2 class="headline">
       <img src="images/headline.png" alt="Persons Icon" />
       <span style="background-color: rgb(227, 142, 15); padding: 10px; font-weight: 900;">TOP CLEAN SHEET KEEPER</span>
       <img src="images/headline.png" alt="Persons Icon" />
     </h2>
-
     <div class="row">
       <table class="table table-striped pt-3">
         <thead>
@@ -139,6 +136,7 @@
                 }
           ?>
         </tbody>
+
       </table>
     </div>
   </div>
