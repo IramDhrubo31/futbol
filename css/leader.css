@@ -1,51 +1,51 @@
-body{ 
-    background-image: url("../images/leaderpagebackground.jpg"); 
-    background-position: center; 
-    background-attachment: fixed; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
+body {
+    background-image: url("../images/leaderpagebackground.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 } 
-.table{
-    border-collapse: separate; 
-    border-spacing: 10px; 
+.table {
+    border-collapse: separate;
+    border-spacing: 10px;
  } 
- .table thead th{ 
-    border-top: none;   
-    color: rgb(245, 180, 14); 
-    font-weight: 900; 
-    font-size: 20px; 
- } 
- .table tbody td{ 
-    background-color: #eac755; 
-    border: 2px solid white; 
-    border-radius: 15px; 
-    padding: 10px; 
-    width: 25%; 
+ .table thead th {
+    border-top: none;
+    color: rgb(245, 180, 14);
+    font-weight: 900;
+    font-size: 20px;
+ }
+ .table tbody td {
+    background-color: #eac755;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 10px;
+    width: 25%;
  }
  
-.table{ 
-    border-collapse: separate; 
-    border-spacing: 20px 10px; 
+.table { 
+    border-collapse: separate;
+    border-spacing: 20px 10px;
 }
 .table tbody td img{
-    width: 30px; 
-    height: 30px; 
+    width: 30px;
+    height: 30px;
 } 
-h2{ 
-    font-family: 'Courier New', Courier, monospace; 
+h2 { 
+    font-family: 'Courier New', Courier, monospace;
     padding-top: 50px; 
-    color: rgb(250, 241, 252);    
+    color: rgb(250, 241, 252);   
 } 
-.headline { 
-    display: flex; 
-    align-items: center;   
-    justify-content: center; 
-    font-weight: 900; 
+.headline {
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    font-weight: 900;
 }
-.headline img{ 
-    width: 100px; 
+.headline img { 
+    width: 100px;
     height: 100px;
 } 
-.container{
-    margin-bottom: 200px; 
-} 
+.container {
+    margin-bottom: 200px;
+}
