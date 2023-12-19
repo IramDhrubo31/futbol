@@ -16,7 +16,7 @@ else{
     
     if (mysqli_query($link, $sql)) {
     
-      //header('location:../Contact_Page/contactPage.php');
+      header('location:../Contact_Page/contact.html');
 
     } else {
       echo "<script>alert('Error: '.$sql.'<br>' . mysqli_error($link))</script>" ;

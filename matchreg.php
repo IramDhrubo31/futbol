@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Match Registration</title>
+    <link rel="icon" href="logo/football_1165249.png">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg shadow-sm bg-white px-3 sticky-md-top" style="font-size: small; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
@@ -58,7 +59,10 @@
             <a class="nav-link" href="Contact_Page/contact.html" target="_blank">CONTACT US</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="members.php">MEMBERS</a>
+            <a class="nav-link" href="dashboard.php">DASHBOARD</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="members.php" target="_blank">MEMBERS</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="fixture.php" target="_blank">FIXTURES</a>
@@ -67,7 +71,10 @@
             <a class="nav-link" href="leaderboard.php" target="_blank">LEADERBOARD</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html">LOGOUT</a>
+                <a class="nav-link" href="pprofile.php">PROFILE</a>
+              </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php">LOGOUT</a>
           </li>
           
         </ul>
@@ -94,6 +101,13 @@
                 <option value="" disabled selected>Select an option</option>  
                 <option value="Match 1">Match 1</option>
                 <option value="Match 2">Match 2</option>
+                <option value="Match 3">Match 3</option>
+                <option value="Match 4">Match 4</option>
+                <option value="Match 5">Match 5</option>
+                <option value="Match 6">Match 6</option>
+                <option value="Match 7">Match 7</option>
+                <option value="Match 8">Match 8</option>
+                <option value="Match 9">Match 9</option>
               </select> 
 
               <label for="teamname" style="color: white; margin-bottom: 3px; margin-top: 5px; font-size: large;">Choose Team</label>

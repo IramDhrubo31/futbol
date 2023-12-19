@@ -13,9 +13,9 @@ $sql = "SELECT * FROM user_table WHERE user_name ='$username'";
 $userInfo = mysqli_query($link, $sql);
 $userInfo = mysqli_fetch_assoc($userInfo);
 
-$psql = "SELECT * FROM player_table WHERE user_name ='$username'";
-$playerInfo = mysqli_query($link, $psql);
-$playerInfo = mysqli_fetch_assoc($playerInfo);
+// $psql = "SELECT * FROM user_table WHERE user_name ='$username'";
+// $contactInfo = mysqli_query($link, $psql);
+// $contactInfo = mysqli_fetch_assoc($contactInfo);
 
 
 if (isset($_POST['upName'])) {
@@ -48,37 +48,22 @@ if (isset($_POST['upPass'])) {
   mysqli_close($link);
 }
 
-if (isset($_POST['upPosition'])) {
-  $updateposition = $_POST['updateposition'];
+if (isset($_POST['upContact'])) {
+  $updatecontact = $_POST['updatecontact'];
 
   include "connection.php";
 
   if ($link == false) {
     die("ERROR: Could not connect. " . mysqli_connect_error());
   }
-  $usql = "UPDATE player_table SET position = '$updateposition' WHERE user_name ='$username'";
-  $result = mysqli_query($link, $usql);
+  $usql = "UPDATE user_table SET contactNumber = '$updatecontact' WHERE user_name ='$username'";
+  $uresult = mysqli_query($link, $usql);
 
   // $uRes= mysqli_query($link, $usql);
   mysqli_close($link);
 }
 ?>
-<!-- <?php
 
-      // if (isset($_POST['upPosition'])) {
-      //   session_start();
-      //   $updateposition = $_POST['updateposition'];
-
-      //   include "connection.php";
-
-      //   if($link == false) {
-      //     die("ERROR: Could not connect. ". mysqli_connect_error());
-      // }
-      // $usql= "INSERT INTO player_table(position) VALUES ('$updateposition)";
-      // // $uRes= mysqli_query($link, $usql);
-      // mysqli_close($link);
-      // }
-      ?> -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,6 +74,7 @@ if (isset($_POST['upPosition'])) {
   <link rel="stylesheet" href="css/pprofile.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <title>Profile</title>
+  <link rel="icon" href="logo/football_1165249.png">
 </head>
 
 <body>
@@ -112,7 +98,7 @@ if (isset($_POST['upPosition'])) {
             <a class="nav-link" href="dashboard.php">DASHBOARD</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="members.php">MEMBERS</a>
+            <a class="nav-link" href="members.php" target="_blank">MEMBERS</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="fixture.php" target="_blank">FIXTURES</a>
@@ -121,7 +107,7 @@ if (isset($_POST['upPosition'])) {
             <a class="nav-link" href="leaderboard.php" target="_blank">LEADERBOARD</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html">LOGOUT</a>
+            <a class="nav-link" href="index.php">LOGOUT</a>
           </li>
 
         </ul>
@@ -153,7 +139,13 @@ if (isset($_POST['upPosition'])) {
               <label>Email: <span class="lead info ps-2"><?php echo $userInfo['email']; ?></span?</label>
             </div>
             <div class="row mb-3">
-              <labe>Position:<span class="lead info ps-2"><?php echo $playerInfo['position'] ?></span></labe>
+              <labe>Contact Number:<span class="lead info ps-2"><?php echo $userInfo['contactNumber'] ?></span></labe>
+            </div>
+            <div class="row mb-3">
+              <labe>Blood Group:<span class="lead info ps-2"><?php echo $userInfo['bloodGroup'] ?></span></labe>
+            </div>
+            <div class="row mb-3">
+              <labe>Gender:<span class="lead info ps-2"><?php echo $userInfo['gender'] ?></span></labe>
             </div>
             <div class="text-start">
               <a href="pprofile.php" class="btn btn-success rounded-2"style="color: white;">Load Data</a>
@@ -191,10 +183,10 @@ if (isset($_POST['upPosition'])) {
         <form action="pprofile.php" method="post">
           <div class="row">
             <div class="col-6">
-              <input required type="text" class="form-control shadow-sm" placeholder="Enter Updated Position" aria-label="updateposition" name="updateposition">
+              <input required type="text" class="form-control shadow-sm" placeholder="Enter Updated Contact Number" aria-label="updatecontact" name="updatecontact">
             </div>
             <div class="col-6">
-              <button type="submit" class="btn btn-success mb-3 rounded-2" style="color: white;" name="upPosition">Update Position</button>
+              <button type="submit" class="btn btn-success mb-3 rounded-2" style="color: white;" name="upContact">Update Contact</button>
             </div>
           </div>
         </form>

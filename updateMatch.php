@@ -38,11 +38,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Matches</title>
+    <link rel="icon" href="logo/football_1165249.png">
     <link rel="stylesheet" href="css/updateMatch.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="bg-info bg-opacity-50">
     <nav class="navbar navbar-expand-md shadow-sm bg-white px-3 sticky-md-top" style="font-size: small; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#Home">
@@ -92,6 +93,12 @@
                                 <option value="Match 1">Match 1</option>
                                 <option value="Match 2">Match 2</option>
                                 <option value="Match 3">Match 3</option>
+                                <option value="Match 4">Match 4</option>
+                                <option value="Match 5">Match 5</option>
+                                <option value="Match 6">Match 6</option>
+                                <option value="Match 7">Match 7</option>
+                                <option value="Match 8">Match 8</option>
+                                <option value="Match 9">Match 9</option>
                             </select>
                         </div>
                         <div class="mt-2">
@@ -118,7 +125,7 @@
                                 <select name="teamB" id="teamB" class="form-select" aria-label="Default select example">
                                     <!-- <option value="" disabled selected>Select an option</option> -->
                                     <option value="CSC101">CSC101</option>
-                                    <option value="CSC203">CSC203</option>
+                                    <option value="CSC203" selected>CSC203</option>
                                 </select>
                             </div>
 
@@ -133,12 +140,22 @@
                         <div class="text-center">
                             <input type="submit" class="px-3 py-1 rounded-4 mt-4" name="submit" value="UPDATE MATCH">
                         </div>
-                        <?php
-                            if(isset($_POST['submit'])){
-                                echo $updateInfo['score']; 
-                            }
-                        ?>
                     </form>
+                    <?php 
+                        if(isset($_POST['submit'])){
+                        echo '<div class="d-flex justify-content-end">
+                                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                                    <div class="toast-header bg-success bg-opacity-100 text-white">
+                                        <strong class="me-auto">Success</strong>
+                                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                                    </div>
+                                    <div class="toast-body bg-success bg-opacity-75 text-white fw-bold">
+                                        Score has been updated successfully!
+                                    </div>
+                                </div>
+                                </div>';
+                        }
+                    ?>
                 </div>
             </div>
         </div>
@@ -147,7 +164,12 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-
+    <script>
+    // Activate the toast using Bootstrap's JavaScript
+        var toastEl = document.querySelector('.toast');
+        var toast = new bootstrap.Toast(toastEl);
+        toast.show();
+    </script>
 </body>
 
 </html>
