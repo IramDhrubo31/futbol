@@ -83,10 +83,7 @@
                 <div class="col-12">
                     <form action="updateMatch.php" method="post">
                         <h3 class="text-center">Update Match</h3>
-                        <!-- <div class="my-2">
-                            <label for="date" class="fs-5 my-1">Select Date</label>
-                            <input type="date" name="date" id="date" class="rounded-2 px-2 py-1 my-1">
-                        </div> -->
+                        
                         <div>
                             <label for="matchNumber" class="fs-5 my-1">Match Number</label>
                             <select name="matchNumber" id="matchNumber" class="form-select my-2" style="width: 25%;" aria-label="Default select example">
