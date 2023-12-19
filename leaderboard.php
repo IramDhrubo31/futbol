@@ -31,24 +31,24 @@
 
 <body>
 
-  <div class="container">
-    <h2 class="headline">
-      <img src="images/headline.png" alt="Persons Icon" />
-      <span style="background-color: rgb(227, 142, 15); padding: 10px; font-weight: 900;">TOP SCORERS</span>
-      <img src="images/headline.png" alt="Persons Icon" />
-    </h2>
+  <div class="container"> 
+    <h2 class="headline"> 
+      <img src="images/headline.png" alt="Persons Icon" /> 
+      <span style="background-color: rgb(227, 142, 15); padding: 10px; font-weight: 900;">TOP SCORERS</span> 
+      <img src="images/headline.png" alt="Persons Icon" /> 
+    </h2> 
 
-    <div class="row">
-      <table class="table table-striped pt-5">
-        <thead>
+    <div class="row"> 
+      <table class="table table-striped pt-5"> 
+        <thead> 
           <tr>
-            <th>Rank</th>
-            <th>Player Name</th>
-            <th>No of goals</th>
-          </tr>
-        </thead>
+            <th>Rank</th> 
+            <th>Player Name</th> 
+            <th>No of goals</th> 
+          </tr> 
+        </thead> 
 
-        <tbody>
+        <tbody> 
           <?php
               if (mysqli_num_rows($topGoals) > 0) {
                 $rank = 1;
@@ -68,23 +68,23 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container"> 
 
-    <h2 class="headline">
-      <img src="images/headline.png" alt="Persons Icon" />
-      <span style="background-color: rgb(227, 142, 15); padding: 10px; font-weight: 900;">TOP ASSIST PROVIDER</span>
-      <img src="images/headline.png" alt="Persons Icon" />
+    <h2 class="headline"> 
+      <img src="images/headline.png" alt="Persons Icon"/> 
+      <span style="background-color: rgb(227, 142, 15); padding: 10px; font-weight: 900;">TOP ASSIST PROVIDER</span> 
+      <img src="images/headline.png" alt="Persons Icon"/>  
     </h2>
 
-    <div class="row">
-      <table class="table table-striped pt-3">
-        <thead>
+    <div class="row"> 
+      <table class="table table-striped pt-3"> 
+        <thead> 
           <tr>
-            <th>Rank</th>
-            <th>Player Name</th>
-            <th>No of Assist</th>
-          </tr>
-        </thead>
+            <th>Rank</th> 
+            <th>Player Name</th> 
+            <th>No of Assist</th> 
+          </tr> 
+        </thead> 
 
         <tbody>
           <?php
@@ -106,15 +106,17 @@
   </div>
 
 
-  <div class="container">
-    <h2 class="headline">
-      <img src="images/headline.png" alt="Persons Icon" />
-      <span style="background-color: rgb(227, 142, 15); padding: 10px; font-weight: 900;">TOP CLEAN SHEET KEEPER</span>
-      <img src="images/headline.png" alt="Persons Icon" />
+  <div class="container"> 
+
+    <h2 class="headline"> 
+      <img src="images/headline.png" alt="Persons Icon"/>
+      <span style="background-color: rgb(227, 142, 15); padding: 10px; font-weight: 900;">TOP CLEAN SHEET KEEPER</span> 
+      <img src="images/headline.png" alt="Persons Icon"/> 
     </h2>
-    <div class="row">
-      <table class="table table-striped pt-3">
-        <thead>
+
+    <div class="row"> 
+      <table class="table table-striped pt-3"> 
+        <thead> 
           <tr>
             <th>Rank</th>
             <th>Player Name</th>

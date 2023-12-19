@@ -4,14 +4,11 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $pass = $_POST['pass'];
 
-
     include "../connection.php";
-
 
     if ($link->connect_error) {
         die("Connection failed: " . $link->connect_error);
     }
-
 
     $sql = "SELECT * FROM user_table WHERE user_name = '$username' AND password = '$pass'";
     $result = $link->query($sql);
@@ -22,7 +19,6 @@ if (isset($_POST['submit'])) {
     } else {
         echo "Login unsuccessful. Please check your username and password.";
         header('Location: login.html');
-
     }
 
     $link->close();
